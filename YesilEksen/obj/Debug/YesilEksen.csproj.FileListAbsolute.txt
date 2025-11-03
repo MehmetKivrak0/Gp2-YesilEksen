@@ -1,0 +1,14 @@
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\bin\Debug\YesilEksen.exe.config
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\bin\Debug\YesilEksen.exe
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\bin\Debug\YesilEksen.pdb
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.csproj.AssemblyReference.cache
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.Form1.resources
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.Properties.Resources.resources
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.csproj.GenerateResource.cache
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.exe
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.pdb
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.exe.config
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.SanayiFirmaOnay.resources
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.GenelRapor.resources
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.SdkRapor.resources

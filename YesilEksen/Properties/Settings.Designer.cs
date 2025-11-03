@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GP2_Yeşil_Eksen.Properties
+namespace YesilEksen.Properties
 {
 
 

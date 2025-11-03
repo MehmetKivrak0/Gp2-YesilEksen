@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GP2-Yeşil_Eksen")]
+[assembly: AssemblyTitle("YesilEksen")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GP2-Yeşil_Eksen")]
+[assembly: AssemblyProduct("YesilEksen")]
 [assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1635e065-c3ee-4f32-9b34-c86ccb616d8c")]
+[assembly: Guid("60e1a148-9809-4cbf-9b1c-04c1e0e01ce5")]
 
 // Version information for an assembly consists of the following four values:
 //

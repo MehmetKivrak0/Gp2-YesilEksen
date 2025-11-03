@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GP2_Yeşil_Eksen
+namespace YesilEksen
 {
     internal static class Program
     {
