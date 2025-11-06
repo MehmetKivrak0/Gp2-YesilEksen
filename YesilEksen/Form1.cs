@@ -44,9 +44,6 @@ namespace YesilEksen
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GenelRapor genelRapor = new GenelRapor();
-            genelRapor.Show();
-            this.Hide();
         }
 
         private void pnlAltMenu_Paint(object sender, PaintEventArgs e)
@@ -59,6 +56,26 @@ namespace YesilEksen
             SanayiFirmaOnay sanayiFirma = new SanayiFirmaOnay();
             sanayiFirma.Show();
             this.Hide();
+        }
+
+        private void btnAlımTaleb_Click(object sender, EventArgs e)
+        {
+            SanayiAlımTalebi sanayiAlımTalebi = new SanayiAlımTalebi();
+            sanayiAlımTalebi.Show();
+            this.Hide();
+
+        }
+
+        private void btnFirmataleb_Click(object sender, EventArgs e)
+        {
+            SanayiAlımTalebi sanayiAlımTalebi = new SanayiAlımTalebi();
+            sanayiAlımTalebi.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

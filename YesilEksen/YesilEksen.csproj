@@ -53,30 +53,60 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GenelRapor.cs">
+    <Compile Include="Sanayi\GenelRapor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GenelRapor.Designer.cs">
+    <Compile Include="Sanayi\GenelRapor.Designer.cs">
       <DependentUpon>GenelRapor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SanayiFirmaOnay.cs">
+    <Compile Include="Sanayi\SanayiAlımTalebi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SanayiFirmaOnay.Designer.cs">
+    <Compile Include="Sanayi\SanayiAlımTalebi.Designer.cs">
+      <DependentUpon>SanayiAlımTalebi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sanayi\SanayiFirmaOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanayi\SanayiFirmaOnay.Designer.cs">
       <DependentUpon>SanayiFirmaOnay.cs</DependentUpon>
     </Compile>
-    <Compile Include="SdkRapor.cs">
+    <Compile Include="Tarım\GenelRapor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SdkRapor.Designer.cs">
+    <Compile Include="Tarım\GenelRapor.Designer.cs">
+      <DependentUpon>GenelRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarım\SdkRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarım\SdkRapor.Designer.cs">
       <DependentUpon>SdkRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarım\ÇiftlikOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarım\ÇiftlikOnay.Designer.cs">
+      <DependentUpon>ÇiftlikOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarım\ÇitflikÜrünOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarım\ÇitflikÜrünOnay.Designer.cs">
+      <DependentUpon>ÇitflikÜrünOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarım\Çİftçi-Dasboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarım\Çİftçi-Dasboard.Designer.cs">
+      <DependentUpon>Çİftçi-Dasboard.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GenelRapor.resx">
+    <EmbeddedResource Include="Sanayi\GenelRapor.resx">
       <DependentUpon>GenelRapor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -89,11 +119,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SanayiFirmaOnay.resx">
+    <EmbeddedResource Include="Sanayi\SanayiAlımTalebi.resx">
+      <DependentUpon>SanayiAlımTalebi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanayi\SanayiFirmaOnay.resx">
       <DependentUpon>SanayiFirmaOnay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SdkRapor.resx">
+    <EmbeddedResource Include="Tarım\GenelRapor.resx">
+      <DependentUpon>GenelRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarım\SdkRapor.resx">
       <DependentUpon>SdkRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarım\ÇiftlikOnay.resx">
+      <DependentUpon>ÇiftlikOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarım\ÇitflikÜrünOnay.resx">
+      <DependentUpon>ÇitflikÜrünOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarım\Çİftçi-Dasboard.resx">
+      <DependentUpon>Çİftçi-Dasboard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

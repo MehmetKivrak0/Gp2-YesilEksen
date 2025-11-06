@@ -12,3 +12,4 @@ C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.exe.
 C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.SanayiFirmaOnay.resources
 C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.GenelRapor.resources
 C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.SdkRapor.resources
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.SanayiAlımTalebi.resources

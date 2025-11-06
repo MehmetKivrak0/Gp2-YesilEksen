@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.Button btnRaporlama;
             System.Windows.Forms.Button btnFirmaOnay;
+            System.Windows.Forms.Button btnFirmataleb;
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAlımTaleb = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlAltMenu = new System.Windows.Forms.Panel();
@@ -72,6 +74,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             btnRaporlama = new System.Windows.Forms.Button();
             btnFirmaOnay = new System.Windows.Forms.Button();
+            btnFirmataleb = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -88,7 +91,7 @@
             // btnRaporlama
             // 
             btnRaporlama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            btnRaporlama.Location = new System.Drawing.Point(8, 276);
+            btnRaporlama.Location = new System.Drawing.Point(8, 322);
             btnRaporlama.Margin = new System.Windows.Forms.Padding(4);
             btnRaporlama.Name = "btnRaporlama";
             btnRaporlama.Size = new System.Drawing.Size(222, 55);
@@ -106,10 +109,23 @@
             btnFirmaOnay.Name = "btnFirmaOnay";
             btnFirmaOnay.Size = new System.Drawing.Size(222, 55);
             btnFirmaOnay.TabIndex = 3;
-            btnFirmaOnay.Text = "FirmaOnay";
+            btnFirmaOnay.Text = "Firma-Onay";
             btnFirmaOnay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnFirmaOnay.UseVisualStyleBackColor = true;
             btnFirmaOnay.Click += new System.EventHandler(this.btnFirmaOnay_Click);
+            // 
+            // btnFirmataleb
+            // 
+            btnFirmataleb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            btnFirmataleb.Location = new System.Drawing.Point(8, 275);
+            btnFirmataleb.Margin = new System.Windows.Forms.Padding(4);
+            btnFirmataleb.Name = "btnFirmataleb";
+            btnFirmataleb.Size = new System.Drawing.Size(222, 55);
+            btnFirmataleb.TabIndex = 4;
+            btnFirmataleb.Text = "Firma-Taleb";
+            btnFirmataleb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnFirmataleb.UseVisualStyleBackColor = true;
+            btnFirmataleb.Click += new System.EventHandler(this.btnFirmataleb_Click);
             // 
             // label6
             // 
@@ -226,11 +242,11 @@
             // 
             // btnDetaygit
             // 
-            this.btnDetaygit.Location = new System.Drawing.Point(392, 132);
+            this.btnDetaygit.Location = new System.Drawing.Point(404, 65);
             this.btnDetaygit.Name = "btnDetaygit";
             this.btnDetaygit.Size = new System.Drawing.Size(168, 48);
             this.btnDetaygit.TabIndex = 2;
-            this.btnDetaygit.Text = "Detaylara Git";
+            this.btnDetaygit.Text = "Firma Detay Git";
             this.btnDetaygit.UseVisualStyleBackColor = true;
             this.btnDetaygit.Click += new System.EventHandler(this.btnDetaygit_Click);
             // 
@@ -270,9 +286,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(21, 38);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 22);
+            this.label8.Size = new System.Drawing.Size(109, 22);
             this.label8.TabIndex = 4;
-            this.label8.Text = "Alın Talebi :";
+            this.label8.Text = "Alım Talebi :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -454,6 +470,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnAlımTaleb);
             this.groupBox1.Controls.Add(this.btnDetaygit);
             this.groupBox1.Controls.Add(this.panel5);
             this.groupBox1.Controls.Add(this.panel4);
@@ -464,6 +481,16 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acil Eylem Gerektirenler";
+            // 
+            // btnAlımTaleb
+            // 
+            this.btnAlımTaleb.Location = new System.Drawing.Point(404, 190);
+            this.btnAlımTaleb.Name = "btnAlımTaleb";
+            this.btnAlımTaleb.Size = new System.Drawing.Size(168, 48);
+            this.btnAlımTaleb.TabIndex = 3;
+            this.btnAlımTaleb.Text = "AlımTalep Git";
+            this.btnAlımTaleb.UseVisualStyleBackColor = true;
+            this.btnAlımTaleb.Click += new System.EventHandler(this.btnAlımTaleb_Click);
             // 
             // panel1
             // 
@@ -478,6 +505,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
+            this.panel2.Controls.Add(btnFirmataleb);
             this.panel2.Controls.Add(btnFirmaOnay);
             this.panel2.Controls.Add(this.pnlAltMenu);
             this.panel2.Controls.Add(btnRaporlama);
@@ -493,7 +521,7 @@
             // 
             this.pnlAltMenu.Controls.Add(this.btnsdkrapor);
             this.pnlAltMenu.Controls.Add(this.btngenelrapor);
-            this.pnlAltMenu.Location = new System.Drawing.Point(26, 330);
+            this.pnlAltMenu.Location = new System.Drawing.Point(26, 376);
             this.pnlAltMenu.Name = "pnlAltMenu";
             this.pnlAltMenu.Size = new System.Drawing.Size(200, 98);
             this.pnlAltMenu.TabIndex = 2;
@@ -533,6 +561,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(174, 197);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
@@ -610,6 +639,7 @@
         private System.Windows.Forms.Button btnsdkrapor;
         private System.Windows.Forms.Button btngenelrapor;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAlımTaleb;
     }
 }
 
