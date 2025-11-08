@@ -31,15 +31,17 @@
             System.Windows.Forms.Button button3;
             System.Windows.Forms.Button button2;
             System.Windows.Forms.Button btnRaporlama;
+            System.Windows.Forms.Button button10;
+            System.Windows.Forms.Button button7;
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlAltMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnsdkrapor = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAlımTaleb = new System.Windows.Forms.Button();
@@ -63,16 +65,18 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             button3 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             btnRaporlama = new System.Windows.Forms.Button();
+            button10 = new System.Windows.Forms.Button();
+            button7 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.pnlAltMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,24 +86,9 @@
             this.panel4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
-            this.panel2.Controls.Add(button3);
-            this.panel2.Controls.Add(button2);
-            this.panel2.Controls.Add(this.pnlAltMenu);
-            this.panel2.Controls.Add(btnRaporlama);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(69, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(227, 752);
-            this.panel2.TabIndex = 25;
             // 
             // button3
             // 
@@ -125,27 +114,6 @@
             button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             button2.UseVisualStyleBackColor = true;
             // 
-            // pnlAltMenu
-            // 
-            this.pnlAltMenu.Controls.Add(this.button1);
-            this.pnlAltMenu.Controls.Add(this.btnsdkrapor);
-            this.pnlAltMenu.Location = new System.Drawing.Point(26, 386);
-            this.pnlAltMenu.Name = "pnlAltMenu";
-            this.pnlAltMenu.Size = new System.Drawing.Size(200, 98);
-            this.pnlAltMenu.TabIndex = 2;
-            this.pnlAltMenu.Visible = false;
-            // 
-            // btnsdkrapor
-            // 
-            this.btnsdkrapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnsdkrapor.Location = new System.Drawing.Point(32, 0);
-            this.btnsdkrapor.Name = "btnsdkrapor";
-            this.btnsdkrapor.Size = new System.Drawing.Size(169, 37);
-            this.btnsdkrapor.TabIndex = 1;
-            this.btnsdkrapor.Text = "-Genel Rapor";
-            this.btnsdkrapor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsdkrapor.UseVisualStyleBackColor = true;
-            // 
             // btnRaporlama
             // 
             btnRaporlama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -158,6 +126,55 @@
             btnRaporlama.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnRaporlama.UseVisualStyleBackColor = true;
             btnRaporlama.Click += new System.EventHandler(this.btnRaporlama_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
+            this.panel2.Controls.Add(button7);
+            this.panel2.Controls.Add(button10);
+            this.panel2.Controls.Add(button3);
+            this.panel2.Controls.Add(button2);
+            this.panel2.Controls.Add(this.pnlAltMenu);
+            this.panel2.Controls.Add(btnRaporlama);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(69, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(227, 752);
+            this.panel2.TabIndex = 25;
+            // 
+            // pnlAltMenu
+            // 
+            this.pnlAltMenu.Controls.Add(this.button1);
+            this.pnlAltMenu.Controls.Add(this.btnsdkrapor);
+            this.pnlAltMenu.Location = new System.Drawing.Point(26, 386);
+            this.pnlAltMenu.Name = "pnlAltMenu";
+            this.pnlAltMenu.Size = new System.Drawing.Size(200, 98);
+            this.pnlAltMenu.TabIndex = 2;
+            this.pnlAltMenu.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(32, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(169, 37);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "- Sdk Rapor";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnsdkrapor
+            // 
+            this.btnsdkrapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnsdkrapor.Location = new System.Drawing.Point(32, 0);
+            this.btnsdkrapor.Name = "btnsdkrapor";
+            this.btnsdkrapor.Size = new System.Drawing.Size(169, 37);
+            this.btnsdkrapor.TabIndex = 1;
+            this.btnsdkrapor.Text = "-Genel Rapor";
+            this.btnsdkrapor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsdkrapor.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -179,17 +196,6 @@
             this.panel3.Size = new System.Drawing.Size(69, 752);
             this.panel3.TabIndex = 24;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(32, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "- Sdk Rapor";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
@@ -201,16 +207,6 @@
             this.panel1.Size = new System.Drawing.Size(1224, 100);
             this.panel1.TabIndex = 26;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(9, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 32);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ziraat Odası -Admin Paneli";
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Red;
@@ -221,6 +217,16 @@
             this.button4.TabIndex = 28;
             this.button4.Text = "Yardım";
             this.button4.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(354, 32);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Ziraat Odası -Admin Paneli";
             // 
             // button5
             // 
@@ -467,16 +473,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Son Aktivitiler";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 114);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1191, 167);
-            this.dataGridView1.TabIndex = 1;
-            // 
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -529,6 +525,40 @@
             this.textBox1.Size = new System.Drawing.Size(191, 28);
             this.textBox1.TabIndex = 0;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(30, 114);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1191, 167);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // button10
+            // 
+            button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            button10.Location = new System.Drawing.Point(4, 561);
+            button10.Margin = new System.Windows.Forms.Padding(4);
+            button10.Name = "button10";
+            button10.Size = new System.Drawing.Size(222, 55);
+            button10.TabIndex = 7;
+            button10.Text = "Çiftlikler Sayfası";
+            button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button10.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            button7.Location = new System.Drawing.Point(4, 614);
+            button7.Margin = new System.Windows.Forms.Padding(4);
+            button7.Name = "button7";
+            button7.Size = new System.Drawing.Size(222, 55);
+            button7.TabIndex = 8;
+            button7.Text = "Ürünler Sayfası";
+            button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button7.UseVisualStyleBackColor = true;
+            // 
             // Çİftçi_Dasboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -556,9 +586,9 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,6 +1,6 @@
-﻿namespace YesilEksen.Tarım
+﻿namespace YesilEksen.Sanayi
 {
-    partial class GenelRapor
+    partial class SanayiGenelRapor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button button4;
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.Button button1;
             System.Windows.Forms.Button button3;
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.Button button6;
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.Button button4;
             this.pnlfirmaonay = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -59,14 +56,12 @@
             this.btnYardım = new System.Windows.Forms.Button();
             this.btnÇıkışYap = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pnlAltMenu = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            button4 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             button1 = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
-            button6 = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
+            button4 = new System.Windows.Forms.Button();
             this.pnlfirmaonay.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -75,80 +70,18 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.pnlAltMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
-            this.panel2.Controls.Add(this.pnlAltMenu);
-            this.panel2.Controls.Add(button6);
-            this.panel2.Controls.Add(button4);
-            this.panel2.Controls.Add(button1);
-            this.panel2.Controls.Add(button3);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(69, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(227, 721);
-            this.panel2.TabIndex = 39;
-            // 
-            // button4
-            // 
-            button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            button4.Location = new System.Drawing.Point(8, 267);
-            button4.Margin = new System.Windows.Forms.Padding(4);
-            button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(222, 55);
-            button4.TabIndex = 5;
-            button4.Text = "Çiftlik-Onay";
-            button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            button1.Location = new System.Drawing.Point(8, 318);
-            button1.Margin = new System.Windows.Forms.Padding(4);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(222, 55);
-            button1.TabIndex = 4;
-            button1.Text = "Ürün-Onay";
-            button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            button3.Location = new System.Drawing.Point(8, 222);
-            button3.Margin = new System.Windows.Forms.Padding(4);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(222, 55);
-            button3.TabIndex = 3;
-            button3.Text = "Anasayfa";
-            button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(132)))), ((int)(((byte)(18)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(69, 721);
-            this.panel1.TabIndex = 38;
             // 
             // pnlfirmaonay
             // 
             this.pnlfirmaonay.Controls.Add(this.groupBox3);
             this.pnlfirmaonay.Controls.Add(this.groupBox1);
-            this.pnlfirmaonay.Location = new System.Drawing.Point(294, 76);
+            this.pnlfirmaonay.Location = new System.Drawing.Point(292, 76);
             this.pnlfirmaonay.Name = "pnlfirmaonay";
-            this.pnlfirmaonay.Size = new System.Drawing.Size(824, 642);
-            this.pnlfirmaonay.TabIndex = 37;
+            this.pnlfirmaonay.Size = new System.Drawing.Size(815, 642);
+            this.pnlfirmaonay.TabIndex = 33;
             // 
             // groupBox3
             // 
@@ -173,35 +106,35 @@
             // 
             // chart2
             // 
-            chartArea9.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chart2.Legends.Add(legend9);
+            chartArea13.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea13);
+            legend13.Name = "Legend1";
+            this.chart2.Legends.Add(legend13);
             this.chart2.Location = new System.Drawing.Point(419, 29);
             this.chart2.Name = "chart2";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            series9.YValuesPerPoint = 2;
-            this.chart2.Series.Add(series9);
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series13.Legend = "Legend1";
+            series13.Name = "Series1";
+            series13.YValuesPerPoint = 2;
+            this.chart2.Series.Add(series13);
             this.chart2.Size = new System.Drawing.Size(354, 265);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             // 
             // chart1
             // 
-            chartArea10.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chart1.Legends.Add(legend10);
+            chartArea14.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea14);
+            legend14.Name = "Legend1";
+            this.chart1.Legends.Add(legend14);
             this.chart1.Location = new System.Drawing.Point(45, 29);
             this.chart1.Name = "chart1";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.chart1.Series.Add(series10);
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series14.Legend = "Legend1";
+            series14.Name = "Series1";
+            this.chart1.Series.Add(series14);
             this.chart1.Size = new System.Drawing.Size(329, 265);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -312,10 +245,10 @@
             this.panel4.Controls.Add(this.btnYardım);
             this.panel4.Controls.Add(this.btnÇıkışYap);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(294, 0);
+            this.panel4.Location = new System.Drawing.Point(292, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(824, 70);
-            this.panel4.TabIndex = 36;
+            this.panel4.Size = new System.Drawing.Size(815, 70);
+            this.panel4.TabIndex = 32;
             // 
             // btnYardım
             // 
@@ -350,6 +283,46 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Sanayi Odası -Genel Rapor";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
+            this.panel2.Controls.Add(button4);
+            this.panel2.Controls.Add(button1);
+            this.panel2.Controls.Add(button3);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(69, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(227, 738);
+            this.panel2.TabIndex = 35;
+            // 
+            // button1
+            // 
+            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            button1.Location = new System.Drawing.Point(8, 318);
+            button1.Margin = new System.Windows.Forms.Padding(4);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(222, 55);
+            button1.TabIndex = 4;
+            button1.Text = "Firma-Onay";
+            button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            button3.Location = new System.Drawing.Point(8, 222);
+            button3.Margin = new System.Windows.Forms.Padding(4);
+            button3.Name = "button3";
+            button3.Size = new System.Drawing.Size(222, 55);
+            button3.TabIndex = 3;
+            button3.Text = "Anasayfa";
+            button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::YesilEksen.Properties.Resources.Gemini_Generated_Image_fnul1lfnul1lfnul_removebg_preview_1;
@@ -360,51 +333,40 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // pnlAltMenu
+            // panel1
             // 
-            this.pnlAltMenu.Controls.Add(this.button5);
-            this.pnlAltMenu.Location = new System.Drawing.Point(27, 427);
-            this.pnlAltMenu.Name = "pnlAltMenu";
-            this.pnlAltMenu.Size = new System.Drawing.Size(200, 98);
-            this.pnlAltMenu.TabIndex = 7;
-            this.pnlAltMenu.Visible = false;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(132)))), ((int)(((byte)(18)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(69, 738);
+            this.panel1.TabIndex = 34;
             // 
-            // button5
+            // button4
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.Location = new System.Drawing.Point(32, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(169, 37);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "- Sdg Rapor";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            button4.Location = new System.Drawing.Point(8, 267);
+            button4.Margin = new System.Windows.Forms.Padding(4);
+            button4.Name = "button4";
+            button4.Size = new System.Drawing.Size(222, 55);
+            button4.TabIndex = 5;
+            button4.Text = "Alım-Talebi";
+            button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button6
-            // 
-            button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            button6.Location = new System.Drawing.Point(9, 373);
-            button6.Margin = new System.Windows.Forms.Padding(4);
-            button6.Name = "button6";
-            button6.Size = new System.Drawing.Size(222, 55);
-            button6.TabIndex = 6;
-            button6.Text = "Raporlama ▼";
-            button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // GenelRapor
+            // SanayiGenelRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 721);
+            this.ClientSize = new System.Drawing.Size(1109, 738);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlfirmaonay);
             this.Controls.Add(this.panel4);
-            this.Name = "GenelRapor";
-            this.Text = "GenelRapor";
-            this.panel2.ResumeLayout(false);
+            this.Name = "SanayiGenelRapor";
+            this.Text = "SanayiGenelRapor";
             this.pnlfirmaonay.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
@@ -415,17 +377,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.pnlAltMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlfirmaonay;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button2;
@@ -445,7 +404,8 @@
         private System.Windows.Forms.Button btnYardım;
         private System.Windows.Forms.Button btnÇıkışYap;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel pnlAltMenu;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

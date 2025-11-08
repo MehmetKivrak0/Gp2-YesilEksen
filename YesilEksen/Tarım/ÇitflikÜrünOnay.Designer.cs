@@ -36,8 +36,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnsdkrapor = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlfirmaonay = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtbşdetay = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -62,31 +70,62 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             button3 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             btnRaporlama = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.pnlAltMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlfirmaonay.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // button3
+            // 
+            button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            button3.Location = new System.Drawing.Point(8, 233);
+            button3.Margin = new System.Windows.Forms.Padding(4);
+            button3.Name = "button3";
+            button3.Size = new System.Drawing.Size(222, 55);
+            button3.TabIndex = 5;
+            button3.Text = "Anasayfa";
+            button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            button2.Location = new System.Drawing.Point(8, 284);
+            button2.Margin = new System.Windows.Forms.Padding(4);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(222, 55);
+            button2.TabIndex = 4;
+            button2.Text = "Çiftlik-Onay";
+            button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnRaporlama
+            // 
+            btnRaporlama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            btnRaporlama.Location = new System.Drawing.Point(8, 332);
+            btnRaporlama.Margin = new System.Windows.Forms.Padding(4);
+            btnRaporlama.Name = "btnRaporlama";
+            btnRaporlama.Size = new System.Drawing.Size(222, 55);
+            btnRaporlama.TabIndex = 1;
+            btnRaporlama.Text = "Raporlama ▼";
+            btnRaporlama.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnRaporlama.UseVisualStyleBackColor = true;
+            btnRaporlama.Click += new System.EventHandler(this.btnRaporlama_Click);
             // 
             // panel2
             // 
@@ -102,30 +141,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(227, 746);
             this.panel2.TabIndex = 27;
-            // 
-            // button3
-            // 
-            button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            button3.Location = new System.Drawing.Point(8, 233);
-            button3.Margin = new System.Windows.Forms.Padding(4);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(222, 55);
-            button3.TabIndex = 5;
-            button3.Text = "Anasayfa";
-            button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            button2.Location = new System.Drawing.Point(8, 284);
-            button2.Margin = new System.Windows.Forms.Padding(4);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(222, 55);
-            button2.TabIndex = 4;
-            button2.Text = "Çiftlik-Onay";
-            button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = true;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pnlAltMenu
             // 
@@ -136,6 +152,7 @@
             this.pnlAltMenu.Size = new System.Drawing.Size(200, 98);
             this.pnlAltMenu.TabIndex = 2;
             this.pnlAltMenu.Visible = false;
+            this.pnlAltMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAltMenu_Paint);
             // 
             // button1
             // 
@@ -147,6 +164,7 @@
             this.button1.Text = "- Sdk Rapor";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnsdkrapor
             // 
@@ -158,18 +176,7 @@
             this.btnsdkrapor.Text = "-Genel Rapor";
             this.btnsdkrapor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnsdkrapor.UseVisualStyleBackColor = true;
-            // 
-            // btnRaporlama
-            // 
-            btnRaporlama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            btnRaporlama.Location = new System.Drawing.Point(8, 332);
-            btnRaporlama.Margin = new System.Windows.Forms.Padding(4);
-            btnRaporlama.Name = "btnRaporlama";
-            btnRaporlama.Size = new System.Drawing.Size(222, 55);
-            btnRaporlama.TabIndex = 1;
-            btnRaporlama.Text = "Raporlama ▼";
-            btnRaporlama.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnRaporlama.UseVisualStyleBackColor = true;
+            this.btnsdkrapor.Click += new System.EventHandler(this.btnsdkrapor_Click);
             // 
             // panel3
             // 
@@ -181,16 +188,6 @@
             this.panel3.Size = new System.Drawing.Size(69, 746);
             this.panel3.TabIndex = 26;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::YesilEksen.Properties.Resources.Gemini_Generated_Image_fnul1lfnul1lfnul_removebg_preview_1;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 197);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // pnlfirmaonay
             // 
             this.pnlfirmaonay.Controls.Add(this.groupBox1);
@@ -199,6 +196,87 @@
             this.pnlfirmaonay.Name = "pnlfirmaonay";
             this.pnlfirmaonay.Size = new System.Drawing.Size(947, 664);
             this.pnlfirmaonay.TabIndex = 28;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel4);
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Location = new System.Drawing.Point(27, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(908, 229);
+            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Onay Bekleyen Firmalar";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Location = new System.Drawing.Point(6, 21);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(969, 66);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.dateTimePicker1);
+            this.panel6.Controls.Add(this.comboBox2);
+            this.panel6.Controls.Add(this.comboBox1);
+            this.panel6.Controls.Add(this.button6);
+            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Location = new System.Drawing.Point(24, 4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(849, 59);
+            this.panel6.TabIndex = 1;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(467, 20);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(270, 22);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(323, 18);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(138, 24);
+            this.comboBox2.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(164, 16);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(153, 24);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(743, 16);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 28);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Bul";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(5, 16);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(152, 22);
+            this.textBox1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(9, 87);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(890, 136);
+            this.dataGridView1.TabIndex = 0;
             // 
             // panel5
             // 
@@ -433,86 +511,15 @@
             this.button5.Text = "Çıkış Yap";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // groupBox1
+            // pictureBox1
             // 
-            this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(27, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(908, 229);
-            this.groupBox1.TabIndex = 29;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Onay Bekleyen Firmalar";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Location = new System.Drawing.Point(6, 21);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(969, 66);
-            this.panel4.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.dateTimePicker1);
-            this.panel6.Controls.Add(this.comboBox2);
-            this.panel6.Controls.Add(this.comboBox1);
-            this.panel6.Controls.Add(this.button6);
-            this.panel6.Controls.Add(this.textBox1);
-            this.panel6.Location = new System.Drawing.Point(24, 4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(849, 59);
-            this.panel6.TabIndex = 1;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(467, 20);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(270, 22);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(323, 18);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(138, 24);
-            this.comboBox2.TabIndex = 3;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(164, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 24);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(743, 16);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 28);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Bul";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(5, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 22);
-            this.textBox1.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 87);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(890, 136);
-            this.dataGridView1.TabIndex = 0;
+            this.pictureBox1.Image = global::YesilEksen.Properties.Resources.Gemini_Generated_Image_fnul1lfnul1lfnul_removebg_preview_1;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 197);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // ÇitflikÜrünOnay
             // 
@@ -527,8 +534,12 @@
             this.Text = "ÇitflikÜrünOnay";
             this.panel2.ResumeLayout(false);
             this.pnlAltMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlfirmaonay.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -536,11 +547,7 @@
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

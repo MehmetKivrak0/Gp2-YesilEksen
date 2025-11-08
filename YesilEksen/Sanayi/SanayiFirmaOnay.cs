@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YesilEksen.Sanayi;
 
 namespace YesilEksen
 {
@@ -37,8 +38,8 @@ namespace YesilEksen
 
         private void btngnrapor_Click(object sender, EventArgs e)
         {
-            GenelRapor genelRapor = new GenelRapor();
-            genelRapor.Show();
+            SanayiGenelRapor sanayiGenelRapor = new SanayiGenelRapor();
+            sanayiGenelRapor.Show();
             this.Hide();
         }
 
@@ -46,6 +47,13 @@ namespace YesilEksen
         {
             SdkRapor sdkRapor = new SdkRapor();
             sdkRapor.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SanayiAlımTalebi sanayiAlımTalebi = new SanayiAlımTalebi();
+            sanayiAlımTalebi.Show();
             this.Hide();
         }
     }

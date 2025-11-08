@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YesilEksen.Sanayi;
 
 namespace YesilEksen
 {
@@ -43,6 +44,18 @@ namespace YesilEksen
         {
             SanayiFirmaOnay sanayiFirma = new SanayiFirmaOnay();
             sanayiFirma.Show();
+            this.Hide();
+        }
+
+        private void SanayiAlımTalebi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsdkrapor_Click(object sender, EventArgs e)
+        {
+            SanayiGenelRapor sanayiGenelRapor = new SanayiGenelRapor(); 
+            sanayiGenelRapor.Show();
             this.Hide();
         }
     }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YesilEksen.Tarım;
 
 namespace YesilEksen
 {
@@ -32,15 +33,38 @@ namespace YesilEksen
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
+            Çİftçi_Dasboard çİftçi_Dasboard = new Çİftçi_Dasboard();
+            çİftçi_Dasboard.Show();
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           SanayiFirmaOnay sanayiFirmaOnay = new SanayiFirmaOnay();
-            sanayiFirmaOnay.Show();
+           ÇiftlikOnay  çiftlikOnay = new ÇiftlikOnay();
+            çiftlikOnay.Show();
+            this.Hide();
+
+        }
+
+        private void SdkRapor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ÇitflikÜrünOnay çiftlikÜrünOnay = new ÇitflikÜrünOnay();
+            çiftlikÜrünOnay.Show();
             this.Hide();
         }
     }

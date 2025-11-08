@@ -41,25 +41,25 @@
             this.btnÇıkışYap = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             button2 = new System.Windows.Forms.Button();
             btnanasayfa = new System.Windows.Forms.Button();
             btnRaporlama = new System.Windows.Forms.Button();
@@ -68,25 +68,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
-            this.panel2.Controls.Add(button2);
-            this.panel2.Controls.Add(btnanasayfa);
-            this.panel2.Controls.Add(this.pnlAltMenu);
-            this.panel2.Controls.Add(btnRaporlama);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(69, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(224, 742);
-            this.panel2.TabIndex = 25;
             // 
             // button2
             // 
@@ -114,6 +99,34 @@
             btnanasayfa.UseVisualStyleBackColor = true;
             btnanasayfa.Click += new System.EventHandler(this.btnanasayfa_Click);
             // 
+            // btnRaporlama
+            // 
+            btnRaporlama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            btnRaporlama.Location = new System.Drawing.Point(8, 323);
+            btnRaporlama.Margin = new System.Windows.Forms.Padding(4);
+            btnRaporlama.Name = "btnRaporlama";
+            btnRaporlama.Size = new System.Drawing.Size(222, 55);
+            btnRaporlama.TabIndex = 1;
+            btnRaporlama.Text = "Raporlama ▼";
+            btnRaporlama.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnRaporlama.UseVisualStyleBackColor = true;
+            btnRaporlama.Click += new System.EventHandler(this.btnRaporlama_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
+            this.panel2.Controls.Add(button2);
+            this.panel2.Controls.Add(btnanasayfa);
+            this.panel2.Controls.Add(this.pnlAltMenu);
+            this.panel2.Controls.Add(btnRaporlama);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(69, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(224, 742);
+            this.panel2.TabIndex = 25;
+            // 
             // pnlAltMenu
             // 
             this.pnlAltMenu.Controls.Add(this.btnsdkrapor);
@@ -130,22 +143,10 @@
             this.btnsdkrapor.Name = "btnsdkrapor";
             this.btnsdkrapor.Size = new System.Drawing.Size(169, 37);
             this.btnsdkrapor.TabIndex = 1;
-            this.btnsdkrapor.Text = "- Sdk Rapor";
+            this.btnsdkrapor.Text = "- Genel Rapor";
             this.btnsdkrapor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnsdkrapor.UseVisualStyleBackColor = true;
-            // 
-            // btnRaporlama
-            // 
-            btnRaporlama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            btnRaporlama.Location = new System.Drawing.Point(8, 323);
-            btnRaporlama.Margin = new System.Windows.Forms.Padding(4);
-            btnRaporlama.Name = "btnRaporlama";
-            btnRaporlama.Size = new System.Drawing.Size(222, 55);
-            btnRaporlama.TabIndex = 1;
-            btnRaporlama.Text = "Raporlama ▼";
-            btnRaporlama.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnRaporlama.UseVisualStyleBackColor = true;
-            btnRaporlama.Click += new System.EventHandler(this.btnRaporlama_Click);
+            this.btnsdkrapor.Click += new System.EventHandler(this.btnsdkrapor_Click);
             // 
             // pictureBox1
             // 
@@ -223,27 +224,6 @@
             this.panel4.Size = new System.Drawing.Size(902, 648);
             this.panel4.TabIndex = 27;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.Location = new System.Drawing.Point(21, 10);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(861, 286);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Onay Bekleyen Talepler";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 30);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(836, 250);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label9);
@@ -270,122 +250,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Talep Detayları";
             // 
-            // button1
+            // label9
             // 
-            this.button1.Location = new System.Drawing.Point(301, 291);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Onayla";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(431, 291);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 33);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Reddet";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Talep Eden Firma :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Hedef Çiftlik :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 25);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Talep Edilen Atık :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 161);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 25);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Talep Edilen Miktar:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 199);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 25);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Firma  Notu";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 239);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(168, 25);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Reddetme Nedeni";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(202, 239);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(605, 30);
-            this.textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(208, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(313, 30);
-            this.textBox2.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(208, 89);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(313, 30);
-            this.textBox3.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(208, 125);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(313, 30);
-            this.textBox4.TabIndex = 11;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(208, 161);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(313, 30);
-            this.textBox5.TabIndex = 12;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(208, 203);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(313, 30);
-            this.textBox6.TabIndex = 13;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(536, 88);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 25);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Durumu >";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -397,15 +270,143 @@
             this.label8.Text = "Durumu >";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // textBox6
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(536, 88);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 25);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Durumu >";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textBox6.Location = new System.Drawing.Point(208, 203);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(313, 30);
+            this.textBox6.TabIndex = 13;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(208, 161);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(313, 30);
+            this.textBox5.TabIndex = 12;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(208, 125);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(313, 30);
+            this.textBox4.TabIndex = 11;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(208, 89);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(313, 30);
+            this.textBox3.TabIndex = 10;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(208, 53);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(313, 30);
+            this.textBox2.TabIndex = 9;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(202, 239);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(605, 30);
+            this.textBox1.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(19, 239);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(168, 25);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Reddetme Nedeni";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 199);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(112, 25);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Firma  Notu";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 161);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(185, 25);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Talep Edilen Miktar:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 122);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(170, 25);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Talep Edilen Atık :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(127, 25);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Hedef Çiftlik :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(178, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Talep Eden Firma :";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(431, 291);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(101, 33);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Reddet";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(301, 291);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 33);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Onayla";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox1.Location = new System.Drawing.Point(21, 10);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(861, 286);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Onay Bekleyen Talepler";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 30);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(836, 250);
+            this.dataGridView1.TabIndex = 0;
             // 
             // SanayiAlımTalebi
             // 
@@ -418,16 +419,17 @@
             this.Controls.Add(this.panel1);
             this.Name = "SanayiAlımTalebi";
             this.Text = "SanayiAlımTalebi";
+            this.Load += new System.EventHandler(this.SanayiAlımTalebi_Load);
             this.panel2.ResumeLayout(false);
             this.pnlAltMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

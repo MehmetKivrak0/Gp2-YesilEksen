@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace YesilEksen
+namespace YesilEksen.Tarım
 {
     public partial class GenelRapor : Form
     {
@@ -17,43 +17,9 @@ namespace YesilEksen
             InitializeComponent();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        public void button5_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SanayiFirmaOnay sanayiFirmaOnay = new SanayiFirmaOnay();
-            sanayiFirmaOnay.Show();
-            this.Hide();
-        }
-
-        private void GenelRapor_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnsdkrapor_Click(object sender, EventArgs e)
-        {
-            SdkRapor sdkRapor = new SdkRapor();
-            sdkRapor.Show();
-            this.Hide();
-        }
-
-        private void btnRaporlama_Click(object sender, EventArgs e)
-        {
-            pnlAltMenu.Visible = !pnlAltMenu.Visible;
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            SanayiAlımTalebi sanayiAlımTalebi = new SanayiAlımTalebi();
-            sanayiAlımTalebi.Show();
-            this.Hide();
+                
         }
     }
 }

@@ -10,6 +10,9 @@ C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.exe
 C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.pdb
 C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.exe.config
 C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.SanayiFirmaOnay.resources
-C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.GenelRapor.resources
 C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.SdkRapor.resources
 C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.SanayiAlımTalebi.resources
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.Tarım.ÇiftlikOnay.resources
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.Tarım.ÇitflikÜrünOnay.resources
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.Tarım.Çİftçi_Dasboard.resources
+C:\Users\Mehmet\Documents\GitHub\YesilEksen\YesilEksen\obj\Debug\YesilEksen.Sanayi.SanayiGenelRapor.resources

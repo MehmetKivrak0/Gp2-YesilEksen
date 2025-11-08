@@ -31,6 +31,7 @@
             System.Windows.Forms.Button btnRaporlama;
             System.Windows.Forms.Button btnFirmaOnay;
             System.Windows.Forms.Button btnFirmataleb;
+            System.Windows.Forms.Button button10;
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,8 +60,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblKullaniciMesaji = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -75,6 +74,7 @@
             btnRaporlama = new System.Windows.Forms.Button();
             btnFirmaOnay = new System.Windows.Forms.Button();
             btnFirmataleb = new System.Windows.Forms.Button();
+            button10 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -403,35 +403,13 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.lblKullaniciMesaji);
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(295, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1493, 100);
+            this.panel3.Size = new System.Drawing.Size(1493, 83);
             this.panel3.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(227, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(477, 32);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Bu kısma veritabnından isim çekilcek";
-            // 
-            // lblKullaniciMesaji
-            // 
-            this.lblKullaniciMesaji.AutoSize = true;
-            this.lblKullaniciMesaji.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKullaniciMesaji.Location = new System.Drawing.Point(41, 52);
-            this.lblKullaniciMesaji.Name = "lblKullaniciMesaji";
-            this.lblKullaniciMesaji.Size = new System.Drawing.Size(163, 32);
-            this.lblKullaniciMesaji.TabIndex = 3;
-            this.lblKullaniciMesaji.Text = "Hoşgeldiniz";
             // 
             // button4
             // 
@@ -505,6 +483,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
+            this.panel2.Controls.Add(button10);
             this.panel2.Controls.Add(btnFirmataleb);
             this.panel2.Controls.Add(btnFirmaOnay);
             this.panel2.Controls.Add(this.pnlAltMenu);
@@ -562,6 +541,18 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // button10
+            // 
+            button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            button10.Location = new System.Drawing.Point(8, 526);
+            button10.Margin = new System.Windows.Forms.Padding(4);
+            button10.Name = "button10";
+            button10.Size = new System.Drawing.Size(219, 55);
+            button10.TabIndex = 7;
+            button10.Text = "Firmalar Sayfası";
+            button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button10.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -627,8 +618,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblKullaniciMesaji;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;

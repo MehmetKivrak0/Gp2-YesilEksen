@@ -34,7 +34,6 @@
             this.btngnrapor = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlAltMenu = new System.Windows.Forms.Panel();
-            this.btnsdkrapor = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -113,9 +112,10 @@
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(222, 55);
             button1.TabIndex = 4;
-            button1.Text = "Anasayfa";
+            button1.Text = "Firma-Talep";
             button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btngnrapor
             // 
@@ -146,25 +146,12 @@
             // 
             // pnlAltMenu
             // 
-            this.pnlAltMenu.Controls.Add(this.btnsdkrapor);
             this.pnlAltMenu.Controls.Add(this.btngnrapor);
             this.pnlAltMenu.Location = new System.Drawing.Point(26, 378);
             this.pnlAltMenu.Name = "pnlAltMenu";
             this.pnlAltMenu.Size = new System.Drawing.Size(200, 98);
             this.pnlAltMenu.TabIndex = 2;
             this.pnlAltMenu.Visible = false;
-            // 
-            // btnsdkrapor
-            // 
-            this.btnsdkrapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnsdkrapor.Location = new System.Drawing.Point(35, 31);
-            this.btnsdkrapor.Name = "btnsdkrapor";
-            this.btnsdkrapor.Size = new System.Drawing.Size(169, 37);
-            this.btnsdkrapor.TabIndex = 1;
-            this.btnsdkrapor.Text = "- Sdk Rapor";
-            this.btnsdkrapor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsdkrapor.UseVisualStyleBackColor = true;
-            this.btnsdkrapor.Click += new System.EventHandler(this.btnsdkrapor_Click);
             // 
             // pictureBox1
             // 
@@ -484,7 +471,6 @@
         private System.Windows.Forms.Button btngnrapor;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlAltMenu;
-        private System.Windows.Forms.Button btnsdkrapor;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
