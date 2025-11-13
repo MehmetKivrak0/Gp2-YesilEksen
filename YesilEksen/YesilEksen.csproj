@@ -47,11 +47,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CiftlikDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CiftlikDetay.Designer.cs">
+      <DependentUpon>CiftlikDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciftlikler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciftlikler.Designer.cs">
+      <DependentUpon>Ciftlikler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirmaDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirmaDetay.Designer.cs">
+      <DependentUpon>FirmaDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Firmalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Firmalar.Designer.cs">
+      <DependentUpon>Firmalar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hakkimizda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hakkimizda.Designer.cs">
+      <DependentUpon>Hakkimizda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kartlar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kartlar.Designer.cs">
+      <DependentUpon>Kartlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,8 +145,35 @@
     <Compile Include="Tarım\Çİftçi-Dasboard.Designer.cs">
       <DependentUpon>Çİftçi-Dasboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Yardim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yardim.Designer.cs">
+      <DependentUpon>Yardim.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CiftlikDetay.resx">
+      <DependentUpon>CiftlikDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciftlikler.resx">
+      <DependentUpon>Ciftlikler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirmaDetay.resx">
+      <DependentUpon>FirmaDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firmalar.resx">
+      <DependentUpon>Firmalar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hakkimizda.resx">
+      <DependentUpon>Hakkimizda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kartlar.resx">
+      <DependentUpon>Kartlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -140,6 +209,9 @@
     <EmbeddedResource Include="Tarım\Çİftçi-Dasboard.resx">
       <DependentUpon>Çİftçi-Dasboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Yardim.resx">
+      <DependentUpon>Yardim.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,6 +227,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Gemini_Generated_Image_fnul1lfnul1lfnul-removebg-preview 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\kerem.jpeg" />
+    <Content Include="Resources\Login_Image1.png" />
+    <Content Include="Resources\Login_Image2.png" />
+    <Content Include="Resources\mehmet.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
