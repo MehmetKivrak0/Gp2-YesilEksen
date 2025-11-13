@@ -127,6 +127,18 @@
             btnFirmataleb.UseVisualStyleBackColor = true;
             btnFirmataleb.Click += new System.EventHandler(this.btnFirmataleb_Click);
             // 
+            // button10
+            // 
+            button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            button10.Location = new System.Drawing.Point(8, 526);
+            button10.Margin = new System.Windows.Forms.Padding(4);
+            button10.Name = "button10";
+            button10.Size = new System.Drawing.Size(219, 55);
+            button10.TabIndex = 7;
+            button10.Text = "Firmalar Sayfası";
+            button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button10.UseVisualStyleBackColor = true;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -542,18 +554,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button10
-            // 
-            button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            button10.Location = new System.Drawing.Point(8, 526);
-            button10.Margin = new System.Windows.Forms.Padding(4);
-            button10.Name = "button10";
-            button10.Size = new System.Drawing.Size(219, 55);
-            button10.TabIndex = 7;
-            button10.Text = "Firmalar Sayfası";
-            button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button10.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -566,6 +566,7 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sanayi-Dashboard";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox2.ResumeLayout(false);

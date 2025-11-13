@@ -31,14 +31,17 @@
             System.Windows.Forms.Button button4;
             System.Windows.Forms.Button button1;
             System.Windows.Forms.Button button3;
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.Button button6;
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlAltMenu = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlfirmaonay = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -59,14 +62,13 @@
             this.btnYardım = new System.Windows.Forms.Button();
             this.btnÇıkışYap = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pnlAltMenu = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             button4 = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
             button6 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            this.pnlAltMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlfirmaonay.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -75,25 +77,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.pnlAltMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
-            this.panel2.Controls.Add(this.pnlAltMenu);
-            this.panel2.Controls.Add(button6);
-            this.panel2.Controls.Add(button4);
-            this.panel2.Controls.Add(button1);
-            this.panel2.Controls.Add(button3);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(69, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(227, 721);
-            this.panel2.TabIndex = 39;
             // 
             // button4
             // 
@@ -130,6 +114,65 @@
             button3.Text = "Anasayfa";
             button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            button6.Location = new System.Drawing.Point(9, 373);
+            button6.Margin = new System.Windows.Forms.Padding(4);
+            button6.Name = "button6";
+            button6.Size = new System.Drawing.Size(222, 55);
+            button6.TabIndex = 6;
+            button6.Text = "Raporlama ▼";
+            button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
+            this.panel2.Controls.Add(this.pnlAltMenu);
+            this.panel2.Controls.Add(button6);
+            this.panel2.Controls.Add(button4);
+            this.panel2.Controls.Add(button1);
+            this.panel2.Controls.Add(button3);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(69, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(227, 721);
+            this.panel2.TabIndex = 39;
+            // 
+            // pnlAltMenu
+            // 
+            this.pnlAltMenu.Controls.Add(this.button5);
+            this.pnlAltMenu.Location = new System.Drawing.Point(27, 427);
+            this.pnlAltMenu.Name = "pnlAltMenu";
+            this.pnlAltMenu.Size = new System.Drawing.Size(200, 98);
+            this.pnlAltMenu.TabIndex = 7;
+            this.pnlAltMenu.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button5.Location = new System.Drawing.Point(32, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(169, 37);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "- Sdg Rapor";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::YesilEksen.Properties.Resources.Gemini_Generated_Image_fnul1lfnul1lfnul_removebg_preview_1;
+            this.pictureBox2.Location = new System.Drawing.Point(27, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(174, 197);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
@@ -173,35 +216,35 @@
             // 
             // chart2
             // 
-            chartArea9.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chart2.Legends.Add(legend9);
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
             this.chart2.Location = new System.Drawing.Point(419, 29);
             this.chart2.Name = "chart2";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            series9.YValuesPerPoint = 2;
-            this.chart2.Series.Add(series9);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 2;
+            this.chart2.Series.Add(series1);
             this.chart2.Size = new System.Drawing.Size(354, 265);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             // 
             // chart1
             // 
-            chartArea10.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chart1.Legends.Add(legend10);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(45, 29);
             this.chart1.Name = "chart1";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.chart1.Series.Add(series10);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(329, 265);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -350,49 +393,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Sanayi Odası -Genel Rapor";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::YesilEksen.Properties.Resources.Gemini_Generated_Image_fnul1lfnul1lfnul_removebg_preview_1;
-            this.pictureBox2.Location = new System.Drawing.Point(27, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(174, 197);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pnlAltMenu
-            // 
-            this.pnlAltMenu.Controls.Add(this.button5);
-            this.pnlAltMenu.Location = new System.Drawing.Point(27, 427);
-            this.pnlAltMenu.Name = "pnlAltMenu";
-            this.pnlAltMenu.Size = new System.Drawing.Size(200, 98);
-            this.pnlAltMenu.TabIndex = 7;
-            this.pnlAltMenu.Visible = false;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.Location = new System.Drawing.Point(32, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(169, 37);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "- Sdg Rapor";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            button6.Location = new System.Drawing.Point(9, 373);
-            button6.Margin = new System.Windows.Forms.Padding(4);
-            button6.Name = "button6";
-            button6.Size = new System.Drawing.Size(222, 55);
-            button6.TabIndex = 6;
-            button6.Text = "Raporlama ▼";
-            button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button6.UseVisualStyleBackColor = true;
-            // 
             // GenelRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -403,8 +403,11 @@
             this.Controls.Add(this.pnlfirmaonay);
             this.Controls.Add(this.panel4);
             this.Name = "GenelRapor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenelRapor";
             this.panel2.ResumeLayout(false);
+            this.pnlAltMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlfirmaonay.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
@@ -415,8 +418,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.pnlAltMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

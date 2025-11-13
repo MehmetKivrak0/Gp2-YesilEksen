@@ -35,6 +35,7 @@
             this.pnlAltMenu = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnsdkrapor = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlfirmaonay = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -70,12 +71,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             button3 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             btnRaporlama = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.pnlAltMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlfirmaonay.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -85,7 +86,6 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -177,6 +177,16 @@
             this.btnsdkrapor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnsdkrapor.UseVisualStyleBackColor = true;
             this.btnsdkrapor.Click += new System.EventHandler(this.btnsdkrapor_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::YesilEksen.Properties.Resources.Gemini_Generated_Image_fnul1lfnul1lfnul_removebg_preview_1;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 197);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -511,16 +521,6 @@
             this.button5.Text = "Çıkış Yap";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::YesilEksen.Properties.Resources.Gemini_Generated_Image_fnul1lfnul1lfnul_removebg_preview_1;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 197);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // ÇitflikÜrünOnay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -531,9 +531,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Name = "ÇitflikÜrünOnay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ÇitflikÜrünOnay";
             this.panel2.ResumeLayout(false);
             this.pnlAltMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlfirmaonay.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -547,7 +549,6 @@
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

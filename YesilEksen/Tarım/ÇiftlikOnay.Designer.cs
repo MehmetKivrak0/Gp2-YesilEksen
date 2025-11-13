@@ -35,13 +35,13 @@
             this.pnlAltMenu = new System.Windows.Forms.Panel();
             this.btnsdkrapor = new System.Windows.Forms.Button();
             this.btngnrapor = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -49,6 +49,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtbşdetay = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -69,37 +70,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             button1 = new System.Windows.Forms.Button();
             button7 = new System.Windows.Forms.Button();
             btnRaporlama = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.pnlAltMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
-            this.panel2.Controls.Add(button1);
-            this.panel2.Controls.Add(button7);
-            this.panel2.Controls.Add(this.pnlAltMenu);
-            this.panel2.Controls.Add(btnRaporlama);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(69, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(227, 867);
-            this.panel2.TabIndex = 21;
             // 
             // button1
             // 
@@ -125,6 +110,33 @@
             button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             button7.UseVisualStyleBackColor = true;
             button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // btnRaporlama
+            // 
+            btnRaporlama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            btnRaporlama.Location = new System.Drawing.Point(8, 324);
+            btnRaporlama.Margin = new System.Windows.Forms.Padding(4);
+            btnRaporlama.Name = "btnRaporlama";
+            btnRaporlama.Size = new System.Drawing.Size(222, 55);
+            btnRaporlama.TabIndex = 1;
+            btnRaporlama.Text = "Raporlama ▼";
+            btnRaporlama.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnRaporlama.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
+            this.panel2.Controls.Add(button1);
+            this.panel2.Controls.Add(button7);
+            this.panel2.Controls.Add(this.pnlAltMenu);
+            this.panel2.Controls.Add(btnRaporlama);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(69, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(227, 867);
+            this.panel2.TabIndex = 21;
             // 
             // pnlAltMenu
             // 
@@ -158,17 +170,15 @@
             this.btngnrapor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btngnrapor.UseVisualStyleBackColor = true;
             // 
-            // btnRaporlama
+            // pictureBox1
             // 
-            btnRaporlama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            btnRaporlama.Location = new System.Drawing.Point(8, 324);
-            btnRaporlama.Margin = new System.Windows.Forms.Padding(4);
-            btnRaporlama.Name = "btnRaporlama";
-            btnRaporlama.Size = new System.Drawing.Size(222, 55);
-            btnRaporlama.TabIndex = 1;
-            btnRaporlama.Text = "Raporlama ▼";
-            btnRaporlama.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnRaporlama.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::YesilEksen.Properties.Resources.Gemini_Generated_Image_fnul1lfnul1lfnul_removebg_preview_1;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 197);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -235,16 +245,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Onay Bekleyen Firmalar";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 93);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(969, 227);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel6);
@@ -304,6 +304,16 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(152, 22);
             this.textBox1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 93);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(969, 227);
+            this.dataGridView1.TabIndex = 0;
             // 
             // panel5
             // 
@@ -494,16 +504,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Başvuru Detayları :";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::YesilEksen.Properties.Resources.Gemini_Generated_Image_fnul1lfnul1lfnul_removebg_preview_1;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 197);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // ÇiftlikOnay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -515,22 +515,23 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ÇiftlikOnay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ÇiftlikOnay";
             this.panel2.ResumeLayout(false);
             this.pnlAltMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

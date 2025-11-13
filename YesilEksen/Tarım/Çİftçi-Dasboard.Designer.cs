@@ -127,6 +127,30 @@
             btnRaporlama.UseVisualStyleBackColor = true;
             btnRaporlama.Click += new System.EventHandler(this.btnRaporlama_Click);
             // 
+            // button10
+            // 
+            button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            button10.Location = new System.Drawing.Point(4, 561);
+            button10.Margin = new System.Windows.Forms.Padding(4);
+            button10.Name = "button10";
+            button10.Size = new System.Drawing.Size(222, 55);
+            button10.TabIndex = 7;
+            button10.Text = "Çiftlikler Sayfası";
+            button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button10.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            button7.Location = new System.Drawing.Point(4, 614);
+            button7.Margin = new System.Windows.Forms.Padding(4);
+            button7.Name = "button7";
+            button7.Size = new System.Drawing.Size(222, 55);
+            button7.TabIndex = 8;
+            button7.Text = "Ürünler Sayfası";
+            button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button7.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(43)))));
@@ -535,30 +559,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1191, 167);
             this.dataGridView1.TabIndex = 1;
             // 
-            // button10
-            // 
-            button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            button10.Location = new System.Drawing.Point(4, 561);
-            button10.Margin = new System.Windows.Forms.Padding(4);
-            button10.Name = "button10";
-            button10.Size = new System.Drawing.Size(222, 55);
-            button10.TabIndex = 7;
-            button10.Text = "Çiftlikler Sayfası";
-            button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button10.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            button7.Location = new System.Drawing.Point(4, 614);
-            button7.Margin = new System.Windows.Forms.Padding(4);
-            button7.Name = "button7";
-            button7.Size = new System.Drawing.Size(222, 55);
-            button7.TabIndex = 8;
-            button7.Text = "Ürünler Sayfası";
-            button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button7.UseVisualStyleBackColor = true;
-            // 
             // Çİftçi_Dasboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -571,6 +571,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Name = "Çİftçi_Dasboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Çİftçi_Dasboard";
             this.Load += new System.EventHandler(this.Çİftçi_Dasboard_Load);
             this.panel2.ResumeLayout(false);

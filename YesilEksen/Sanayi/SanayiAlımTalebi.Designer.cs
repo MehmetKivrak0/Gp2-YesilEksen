@@ -418,6 +418,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "SanayiAlımTalebi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SanayiAlımTalebi";
             this.Load += new System.EventHandler(this.SanayiAlımTalebi_Load);
             this.panel2.ResumeLayout(false);
