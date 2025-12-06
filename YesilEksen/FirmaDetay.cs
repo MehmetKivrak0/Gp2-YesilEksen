@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -13,6 +9,8 @@ namespace YesilEksen
 {
     public partial class FirmaDetay : Form
     {
+        public int FirmaID { get; set; }
+
         public FirmaDetay()
         {
             InitializeComponent();
@@ -20,44 +18,284 @@ namespace YesilEksen
 
         private void FirmaDetay_Load(object sender, EventArgs e)
         {
-            // Grafiği temizle
-            charthacimgrafik.Series.Clear();
-            charthacimgrafik.ChartAreas.Clear();
+            try
+            {
+                // Form boyutunu ayarla
+                this.Size = new Size(1280, 750);
+                this.StartPosition = FormStartPosition.CenterScreen;
 
-            // 1. Bir "ChartArea" (Grafik Alanı) ekle ve siyah yap
-            ChartArea chartArea = new ChartArea("AnaAlan");
-            chartArea.BackColor = Color.Black;
+                // Event handler'ları bağla
+                geriToolStripMenuItem.Click += BtnGeri_Click;
+                yardımToolStripMenuItem.Click += BtnYardim_Click;
 
-            // Eksen çizgilerini ve yazılarını ayarla
-            chartArea.AxisX.MajorGrid.LineColor = Color.DimGray;
-            chartArea.AxisY.MajorGrid.LineColor = Color.DimGray;
-            chartArea.AxisX.LineColor = Color.White;
-            chartArea.AxisY.LineColor = Color.White;
-            chartArea.AxisX.LabelStyle.ForeColor = Color.White;
-            chartArea.AxisY.LabelStyle.ForeColor = Color.White;
-            chartArea.AxisY.Title = "kg"; // Y ekseni başlığı
-            chartArea.AxisY.TitleForeColor = Color.White;
+                // Firma bilgilerini yükle
+                if (FirmaID > 0)
+                {
+                    LoadFirmaDetay();
+                    LoadSatinAlmaGecmisi();
+                    LoadIstatistikler();
+                }
 
-            charthacimgrafik.ChartAreas.Add(chartArea);
+                // Grafiği yükle
+                LoadChart();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Sayfa yüklenirken hata: {ex.Message}", 
+                    "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-            // 2. Bir "Series" (Veri Serisi) ekle
-            Series series = new Series("Aylık Alım Hacmi");
-            series.ChartType = SeriesChartType.Column; // Sütun Grafik
-            series.Color = Color.Gray; // Sütunların rengi
+        /// <summary>
+        /// Firma detaylarını yükler
+        /// </summary>
+        private void LoadFirmaDetay()
+        {
+            try
+            {
+                string query = @"
+                    SELECT 
+                        f.Unvan, f.VergiNo, f.Adres,
+                        s.SektorAdi, sh.SehirAdi, d.DurumAdi
+                    FROM Tbl_Firmalar f
+                    LEFT JOIN Tbl_Sektorler s ON f.SektorID = s.SektorID
+                    LEFT JOIN Tbl_Sehirler sh ON f.SehirID = sh.SehirID
+                    LEFT JOIN Tbl_OnayDurumlari d ON f.DurumID = d.DurumID
+                    WHERE f.FirmaID = @firmaID";
 
-            // 3. Test verilerini ekle
-            series.Points.AddXY("Mayıs", 400);
-            series.Points.AddXY("Haziran", 750);
-            series.Points.AddXY("Temmuz", 600);
-            series.Points.AddXY("Ağustos", 900);
-            series.Points.AddXY("Eylül", 500);
-            series.Points.AddXY("Ekim", 700);
+                DataTable dt = DatabaseHelper.ExecuteQuery(query, 
+                    new SQLiteParameter("@firmaID", FirmaID));
 
-            // 4. Seriyi grafiğe ekle
-            charthacimgrafik.Series.Add(series);
+                if (dt.Rows.Count > 0)
+                {
+                    DataRow row = dt.Rows[0];
+                    string unvan = row["Unvan"]?.ToString() ?? "Bilinmiyor";
+                    string sektor = row["SektorAdi"]?.ToString() ?? "";
+                    string sehir = row["SehirAdi"]?.ToString() ?? "";
+                    string durum = row["DurumAdi"]?.ToString() ?? "";
+                    string vergiNo = row["VergiNo"]?.ToString() ?? "";
 
-            // 5. Grafiğin başlığını (Legend) gizle
-            charthacimgrafik.Legends.Clear();
+                    this.Text = $"Firma Detay - {unvan}";
+                    
+                    // Label'ları doldur
+                    lblfirmaadi.Text = unvan;
+                    lblyetkili.Text = $"Sektör: {sektor} | Şehir: {sehir}";
+                    lbltel.Text = $"Vergi No: {vergiNo}";
+                    lbldurum.Text = $"Durumu: {durum}";
+
+                    // Durum rengini ayarla
+                    if (durum == "Onaylandı")
+                        lbldurum.ForeColor = Color.Green;
+                    else if (durum == "Reddedildi")
+                        lbldurum.ForeColor = Color.Red;
+                    else
+                        lbldurum.ForeColor = Color.Orange;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Firma detayları yüklenirken hata: {ex.Message}", 
+                    "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Satın alma geçmişini yükler
+        /// </summary>
+        private void LoadSatinAlmaGecmisi()
+        {
+            try
+            {
+                // DataGridView'i temizle ve yeniden yapılandır
+                dataGridView1.Columns.Clear();
+                dataGridView1.AutoGenerateColumns = true;
+
+                string query = @"
+                    SELECT 
+                        t.TalepTarihi as 'Talep Tarihi',
+                        COALESCE(u.UrunAdi, '-') as 'Ürün Adı',
+                        t.TalepMiktarTon as 'Miktar (Ton)',
+                        COALESCE(c.Unvan, '-') as 'Çiftlik'
+                    FROM Tbl_AlimTalepleri t
+                    LEFT JOIN Tbl_CiftlikUrunleri u ON t.UrunID = u.UrunID
+                    LEFT JOIN Tbl_Ciftlikler c ON t.HedefCiftlikID = c.CiftlikID
+                    WHERE t.FirmaID = @firmaID
+                    ORDER BY t.TalepTarihi DESC
+                    LIMIT 10";
+
+                DataTable dt = DatabaseHelper.ExecuteQuery(query, 
+                    new SQLiteParameter("@firmaID", FirmaID));
+
+                dataGridView1.DataSource = dt;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.ReadOnly = true;
+                dataGridView1.AllowUserToAddRows = false;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Satın alma geçmişi yüklenirken hata: {ex.Message}", 
+                    "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// İstatistikleri yükler
+        /// </summary>
+        private void LoadIstatistikler()
+        {
+            try
+            {
+                // Toplam işlem sayısı
+                object islemResult = DatabaseHelper.ExecuteScalar(
+                    "SELECT COUNT(*) FROM Tbl_AlimTalepleri WHERE FirmaID = @firmaID",
+                    new SQLiteParameter("@firmaID", FirmaID));
+                int toplamIslem = islemResult != null ? Convert.ToInt32(islemResult) : 0;
+                lbltislem.Text = $"Toplam İşlem: {toplamIslem}";
+
+                // Toplam hacim (tüm talepler)
+                object hacimResult = DatabaseHelper.ExecuteScalar(
+                    "SELECT COALESCE(SUM(TalepMiktarTon), 0) FROM Tbl_AlimTalepleri WHERE FirmaID = @firmaID",
+                    new SQLiteParameter("@firmaID", FirmaID));
+                double toplamHacim = hacimResult != null ? Convert.ToDouble(hacimResult) : 0;
+                lblthacim.Text = $"Toplam Hacim: {toplamHacim:N2} Ton";
+
+                // En çok alınan ürün
+                object urunResult = DatabaseHelper.ExecuteScalar(@"
+                    SELECT u.UrunAdi FROM Tbl_AlimTalepleri t
+                    LEFT JOIN Tbl_CiftlikUrunleri u ON t.UrunID = u.UrunID
+                    WHERE t.FirmaID = @firmaID 
+                    GROUP BY t.UrunID 
+                    ORDER BY SUM(t.TalepMiktarTon) DESC 
+                    LIMIT 1",
+                    new SQLiteParameter("@firmaID", FirmaID));
+                string enCokUrun = urunResult?.ToString() ?? "-";
+                lblsikurun.Text = $"En Çok Alınan Ürün: {enCokUrun}";
+
+                // En sık çalışılan çiftlik
+                object ciftlikResult = DatabaseHelper.ExecuteScalar(@"
+                    SELECT c.Unvan FROM Tbl_AlimTalepleri t
+                    LEFT JOIN Tbl_Ciftlikler c ON t.HedefCiftlikID = c.CiftlikID
+                    WHERE t.FirmaID = @firmaID AND t.HedefCiftlikID IS NOT NULL
+                    GROUP BY t.HedefCiftlikID 
+                    ORDER BY COUNT(*) DESC 
+                    LIMIT 1",
+                    new SQLiteParameter("@firmaID", FirmaID));
+                string enSikCiftlik = ciftlikResult?.ToString() ?? "-";
+                lblsikciftlik.Text = $"En Sık Çalışılan Çiftlik: {enSikCiftlik}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"İstatistikler yüklenirken hata: {ex.Message}", 
+                    "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Grafiği yükler
+        /// </summary>
+        private void LoadChart()
+        {
+            try
+            {
+                // Grafiği temizle
+                charthacimgrafik.Series.Clear();
+                charthacimgrafik.ChartAreas.Clear();
+
+                // ChartArea ekle
+                ChartArea chartArea = new ChartArea("AnaAlan");
+                chartArea.BackColor = Color.FromArgb(30, 30, 30);
+                chartArea.AxisX.MajorGrid.LineColor = Color.DimGray;
+                chartArea.AxisY.MajorGrid.LineColor = Color.DimGray;
+                chartArea.AxisX.LineColor = Color.White;
+                chartArea.AxisY.LineColor = Color.White;
+                chartArea.AxisX.LabelStyle.ForeColor = Color.White;
+                chartArea.AxisY.LabelStyle.ForeColor = Color.White;
+                chartArea.AxisY.Title = "Ton";
+                chartArea.AxisY.TitleForeColor = Color.White;
+                chartArea.AxisX.Title = "Ay";
+                chartArea.AxisX.TitleForeColor = Color.White;
+                charthacimgrafik.ChartAreas.Add(chartArea);
+
+                // Başlık ekle
+                charthacimgrafik.Titles.Clear();
+                charthacimgrafik.Titles.Add("Aylık Alım Hacmi");
+                charthacimgrafik.Titles[0].ForeColor = Color.White;
+                charthacimgrafik.Titles[0].Font = new Font("Segoe UI", 11, FontStyle.Bold);
+                charthacimgrafik.BackColor = Color.FromArgb(30, 30, 30);
+
+                // Series ekle
+                Series series = new Series("Aylık Alım Hacmi");
+                series.ChartType = SeriesChartType.Column;
+                series.Color = Color.ForestGreen;
+
+                // Veritabanından alım talepleri verilerini çek (tüm talepler)
+                if (FirmaID > 0)
+                {
+                    string query = @"
+                        SELECT 
+                            strftime('%m', TalepTarihi) as Ay,
+                            SUM(TalepMiktarTon) as ToplamMiktar
+                        FROM Tbl_AlimTalepleri 
+                        WHERE FirmaID = @firmaID
+                        GROUP BY strftime('%m', TalepTarihi)
+                        ORDER BY Ay";
+                    
+                    DataTable dt = DatabaseHelper.ExecuteQuery(query, 
+                        new SQLiteParameter("@firmaID", FirmaID));
+
+                    string[] aylar = { "", "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", 
+                                       "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık" };
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            int ayNo = Convert.ToInt32(row["Ay"]);
+                            double miktar = Convert.ToDouble(row["ToplamMiktar"]);
+                            DataPoint dp = new DataPoint();
+                            dp.SetValueXY(aylar[ayNo], miktar);
+                            dp.Label = miktar.ToString("N1");
+                            dp.LabelForeColor = Color.White;
+                            series.Points.Add(dp);
+                        }
+                    }
+                    else
+                    {
+                        // Veri yoksa bilgi mesajı göster
+                        DataPoint dp = new DataPoint();
+                        dp.SetValueXY("Veri Yok", 0);
+                        series.Points.Add(dp);
+                    }
+                }
+                else
+                {
+                    DataPoint dp = new DataPoint();
+                    dp.SetValueXY("Veri Yok", 0);
+                    series.Points.Add(dp);
+                }
+
+                charthacimgrafik.Series.Add(series);
+                charthacimgrafik.Legends.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Grafik yüklenirken hata: {ex.Message}", 
+                    "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnGeri_Click(object sender, EventArgs e)
+        {
+            Firmalar firmalar = new Firmalar();
+            firmalar.Show();
+            this.Close();
+        }
+
+        private void BtnYardim_Click(object sender, EventArgs e)
+        {
+            Yardim yardim = new Yardim();
+            yardim.ShowDialog();
         }
     }
 }

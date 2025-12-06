@@ -68,7 +68,7 @@
             this.geriToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(819, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1172, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -138,7 +138,7 @@
             // 
             this.toolStrip1.Location = new System.Drawing.Point(0, 27);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(819, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1172, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -154,7 +154,7 @@
             this.pnlfiltre.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlfiltre.Location = new System.Drawing.Point(0, 52);
             this.pnlfiltre.Name = "pnlfiltre";
-            this.pnlfiltre.Size = new System.Drawing.Size(819, 50);
+            this.pnlfiltre.Size = new System.Drawing.Size(1172, 50);
             this.pnlfiltre.TabIndex = 2;
             // 
             // button2
@@ -218,9 +218,9 @@
             this.pnlsayfalama.Controls.Add(this.lblsayfano);
             this.pnlsayfalama.Controls.Add(this.lblonceki);
             this.pnlsayfalama.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlsayfalama.Location = new System.Drawing.Point(0, 462);
+            this.pnlsayfalama.Location = new System.Drawing.Point(0, 606);
             this.pnlsayfalama.Name = "pnlsayfalama";
-            this.pnlsayfalama.Size = new System.Drawing.Size(819, 40);
+            this.pnlsayfalama.Size = new System.Drawing.Size(1172, 40);
             this.pnlsayfalama.TabIndex = 3;
             // 
             // lblsonraki
@@ -228,7 +228,7 @@
             this.lblsonraki.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblsonraki.AutoSize = true;
             this.lblsonraki.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsonraki.Location = new System.Drawing.Point(728, 14);
+            this.lblsonraki.Location = new System.Drawing.Point(1081, 14);
             this.lblsonraki.Name = "lblsonraki";
             this.lblsonraki.Size = new System.Drawing.Size(63, 17);
             this.lblsonraki.TabIndex = 2;
@@ -239,7 +239,7 @@
             this.lblsayfano.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblsayfano.AutoSize = true;
             this.lblsayfano.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsayfano.Location = new System.Drawing.Point(386, 14);
+            this.lblsayfano.Location = new System.Drawing.Point(563, 14);
             this.lblsayfano.Name = "lblsayfano";
             this.lblsayfano.Size = new System.Drawing.Size(59, 17);
             this.lblsayfano.TabIndex = 1;
@@ -261,7 +261,7 @@
             this.flpkartlar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpkartlar.Location = new System.Drawing.Point(0, 102);
             this.flpkartlar.Name = "flpkartlar";
-            this.flpkartlar.Size = new System.Drawing.Size(819, 360);
+            this.flpkartlar.Size = new System.Drawing.Size(1172, 504);
             this.flpkartlar.TabIndex = 4;
             // 
             // Firmalar
@@ -269,14 +269,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(819, 502);
+            this.ClientSize = new System.Drawing.Size(1172, 646);
+            this.ControlBox = false;
             this.Controls.Add(this.flpkartlar);
             this.Controls.Add(this.pnlsayfalama);
             this.Controls.Add(this.pnlfiltre);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Firmalar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Firmalar";
             this.Load += new System.EventHandler(this.Firmalar_Load);
             this.menuStrip1.ResumeLayout(false);

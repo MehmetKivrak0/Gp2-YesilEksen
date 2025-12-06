@@ -135,7 +135,7 @@
             this.groupBox3.Size = new System.Drawing.Size(788, 336);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Detaylı Veri Tablosu";
+            this.groupBox3.Text = "Grafiksel Analiz";
             // 
             // button1
             // 
@@ -190,7 +190,7 @@
             this.groupBox1.Size = new System.Drawing.Size(788, 294);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Detaylı Veri Tablosu";
+            this.groupBox1.Text = "Firma ve Talep Verileri";
             // 
             // groupBox2
             // 
@@ -206,68 +206,68 @@
             this.groupBox2.Size = new System.Drawing.Size(776, 70);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Detaylı Veri Tablosu";
+            this.groupBox2.Text = "Özet İstatistikler";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(565, 38);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(530, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 22);
+            this.label5.Size = new System.Drawing.Size(75, 15);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Net :";
+            this.label5.Text = "Onaylı Miktar:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(279, 36);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(270, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 22);
+            this.label4.Size = new System.Drawing.Size(80, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "Toplam Talep:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(136, 38);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(200, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 22);
+            this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Ton";
+            this.label3.Text = "";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(619, 38);
+            this.textBox4.Location = new System.Drawing.Point(615, 22);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(148, 22);
+            this.textBox4.Size = new System.Drawing.Size(130, 22);
             this.textBox4.TabIndex = 4;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(411, 38);
+            this.textBox3.Location = new System.Drawing.Point(360, 22);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 22);
+            this.textBox3.Size = new System.Drawing.Size(130, 22);
             this.textBox3.TabIndex = 3;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(173, 40);
+            this.textBox1.Location = new System.Drawing.Point(100, 22);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(130, 22);
             this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(19, 38);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(15, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 22);
+            this.label2.Size = new System.Drawing.Size(78, 15);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Toplam Arz :";
+            this.label2.Text = "Toplam Firma:";
             // 
             // dataGridView1
             // 
@@ -385,7 +385,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 739);
+            this.ClientSize = new System.Drawing.Size(1280, 750);
             this.Controls.Add(this.pnlfirmaonay);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

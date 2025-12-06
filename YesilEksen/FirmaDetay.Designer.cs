@@ -91,7 +91,8 @@
             this.geriToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 31);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1172, 27);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -100,7 +101,7 @@
             this.firmalarToolStripMenuItem.Enabled = false;
             this.firmalarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.firmalarToolStripMenuItem.Name = "firmalarToolStripMenuItem";
-            this.firmalarToolStripMenuItem.Size = new System.Drawing.Size(183, 27);
+            this.firmalarToolStripMenuItem.Size = new System.Drawing.Size(153, 23);
             this.firmalarToolStripMenuItem.Text = "Firma Detay Sayfası";
             // 
             // toolStripMenuItem1
@@ -108,14 +109,14 @@
             this.toolStripMenuItem1.Enabled = false;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.ShowShortcutKeys = false;
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(27, 27);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 23);
             this.toolStripMenuItem1.Text = " ";
             // 
             // yardımToolStripMenuItem
             // 
             this.yardımToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.yardımToolStripMenuItem.Name = "yardımToolStripMenuItem";
-            this.yardımToolStripMenuItem.Size = new System.Drawing.Size(80, 27);
+            this.yardımToolStripMenuItem.Size = new System.Drawing.Size(69, 23);
             this.yardımToolStripMenuItem.Text = "Yardım";
             // 
             // toolStripMenuItem3
@@ -123,7 +124,7 @@
             this.toolStripMenuItem3.Enabled = false;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.ShowShortcutKeys = false;
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(179, 27);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(136, 23);
             this.toolStripMenuItem3.Text = "                                       ";
             // 
             // toolStripMenuItem4
@@ -131,7 +132,7 @@
             this.toolStripMenuItem4.Enabled = false;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.ShowShortcutKeys = false;
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(159, 27);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(121, 23);
             this.toolStripMenuItem4.Text = "                                  ";
             // 
             // toolStripMenuItem2
@@ -139,24 +140,23 @@
             this.toolStripMenuItem2.Enabled = false;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.ShowShortcutKeys = false;
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(167, 27);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(127, 23);
             this.toolStripMenuItem2.Text = "                                    ";
             // 
             // geriToolStripMenuItem
             // 
             this.geriToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.geriToolStripMenuItem.Name = "geriToolStripMenuItem";
-            this.geriToolStripMenuItem.Size = new System.Drawing.Size(57, 27);
+            this.geriToolStripMenuItem.Size = new System.Drawing.Size(49, 23);
             this.geriToolStripMenuItem.Text = "Geri";
             // 
             // pnlustbilgi
             // 
             this.pnlustbilgi.Controls.Add(this.tblustpanel);
             this.pnlustbilgi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlustbilgi.Location = new System.Drawing.Point(0, 31);
-            this.pnlustbilgi.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlustbilgi.Location = new System.Drawing.Point(0, 27);
             this.pnlustbilgi.Name = "pnlustbilgi";
-            this.pnlustbilgi.Size = new System.Drawing.Size(1067, 185);
+            this.pnlustbilgi.Size = new System.Drawing.Size(1172, 150);
             this.pnlustbilgi.TabIndex = 2;
             // 
             // tblustpanel
@@ -170,20 +170,18 @@
             this.tblustpanel.Controls.Add(this.pnlbilgiler, 1, 0);
             this.tblustpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblustpanel.Location = new System.Drawing.Point(0, 0);
-            this.tblustpanel.Margin = new System.Windows.Forms.Padding(4);
             this.tblustpanel.Name = "tblustpanel";
             this.tblustpanel.RowCount = 1;
             this.tblustpanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblustpanel.Size = new System.Drawing.Size(1067, 185);
+            this.tblustpanel.Size = new System.Drawing.Size(1172, 150);
             this.tblustpanel.TabIndex = 0;
             // 
             // piclogo
             // 
             this.piclogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.piclogo.Location = new System.Drawing.Point(4, 4);
-            this.piclogo.Margin = new System.Windows.Forms.Padding(4);
+            this.piclogo.Location = new System.Drawing.Point(3, 3);
             this.piclogo.Name = "piclogo";
-            this.piclogo.Size = new System.Drawing.Size(258, 177);
+            this.piclogo.Size = new System.Drawing.Size(287, 144);
             this.piclogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.piclogo.TabIndex = 0;
             this.piclogo.TabStop = false;
@@ -191,10 +189,9 @@
             // picqr
             // 
             this.picqr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picqr.Location = new System.Drawing.Point(803, 4);
-            this.picqr.Margin = new System.Windows.Forms.Padding(4);
+            this.picqr.Location = new System.Drawing.Point(882, 3);
             this.picqr.Name = "picqr";
-            this.picqr.Size = new System.Drawing.Size(260, 177);
+            this.picqr.Size = new System.Drawing.Size(287, 144);
             this.picqr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picqr.TabIndex = 1;
             this.picqr.TabStop = false;
@@ -206,20 +203,18 @@
             this.pnlbilgiler.Controls.Add(this.lblyetkili);
             this.pnlbilgiler.Controls.Add(this.lblfirmaadi);
             this.pnlbilgiler.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlbilgiler.Location = new System.Drawing.Point(270, 4);
-            this.pnlbilgiler.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlbilgiler.Location = new System.Drawing.Point(296, 3);
             this.pnlbilgiler.Name = "pnlbilgiler";
-            this.pnlbilgiler.Size = new System.Drawing.Size(525, 177);
+            this.pnlbilgiler.Size = new System.Drawing.Size(580, 144);
             this.pnlbilgiler.TabIndex = 2;
             // 
             // lbldurum
             // 
             this.lbldurum.AutoSize = true;
             this.lbldurum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldurum.Location = new System.Drawing.Point(25, 139);
-            this.lbldurum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbldurum.Location = new System.Drawing.Point(19, 113);
             this.lbldurum.Name = "lbldurum";
-            this.lbldurum.Size = new System.Drawing.Size(87, 20);
+            this.lbldurum.Size = new System.Drawing.Size(74, 17);
             this.lbldurum.TabIndex = 3;
             this.lbldurum.Text = "Durumu :";
             // 
@@ -227,10 +222,9 @@
             // 
             this.lbltel.AutoSize = true;
             this.lbltel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltel.Location = new System.Drawing.Point(25, 95);
-            this.lbltel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltel.Location = new System.Drawing.Point(19, 77);
             this.lbltel.Name = "lbltel";
-            this.lbltel.Size = new System.Drawing.Size(156, 20);
+            this.lbltel.Size = new System.Drawing.Size(138, 17);
             this.lbltel.TabIndex = 2;
             this.lbltel.Text = "Tel No: 05233052";
             // 
@@ -238,10 +232,9 @@
             // 
             this.lblyetkili.AutoSize = true;
             this.lblyetkili.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblyetkili.Location = new System.Drawing.Point(25, 57);
-            this.lblyetkili.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblyetkili.Location = new System.Drawing.Point(19, 46);
             this.lblyetkili.Name = "lblyetkili";
-            this.lblyetkili.Size = new System.Drawing.Size(116, 20);
+            this.lblyetkili.Size = new System.Drawing.Size(98, 17);
             this.lblyetkili.TabIndex = 1;
             this.lblyetkili.Text = "Çiftlik Sahibi";
             // 
@@ -249,10 +242,9 @@
             // 
             this.lblfirmaadi.AutoSize = true;
             this.lblfirmaadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfirmaadi.Location = new System.Drawing.Point(25, 17);
-            this.lblfirmaadi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblfirmaadi.Location = new System.Drawing.Point(19, 14);
             this.lblfirmaadi.Name = "lblfirmaadi";
-            this.lblfirmaadi.Size = new System.Drawing.Size(80, 20);
+            this.lblfirmaadi.Size = new System.Drawing.Size(68, 17);
             this.lblfirmaadi.TabIndex = 0;
             this.lblfirmaadi.Text = ".. Çiftliği";
             // 
@@ -262,10 +254,9 @@
             this.lblgecmisbaslik.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblgecmisbaslik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblgecmisbaslik.ForeColor = System.Drawing.Color.White;
-            this.lblgecmisbaslik.Location = new System.Drawing.Point(0, 216);
-            this.lblgecmisbaslik.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblgecmisbaslik.Location = new System.Drawing.Point(0, 177);
             this.lblgecmisbaslik.Name = "lblgecmisbaslik";
-            this.lblgecmisbaslik.Size = new System.Drawing.Size(1067, 37);
+            this.lblgecmisbaslik.Size = new System.Drawing.Size(1172, 30);
             this.lblgecmisbaslik.TabIndex = 3;
             this.lblgecmisbaslik.Text = "Satın Alma Geçmişi";
             this.lblgecmisbaslik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -280,12 +271,11 @@
             this.miktar,
             this.cftlikadi});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 253);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 207);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1067, 55);
+            this.dataGridView1.Size = new System.Drawing.Size(1172, 45);
             this.dataGridView1.TabIndex = 4;
             // 
             // tlptarihi
@@ -322,10 +312,9 @@
             this.pnldashboard.Controls.Add(this.tblistatistik);
             this.pnldashboard.Controls.Add(this.lblistatistik);
             this.pnldashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnldashboard.Location = new System.Drawing.Point(0, 308);
-            this.pnldashboard.Margin = new System.Windows.Forms.Padding(4);
+            this.pnldashboard.Location = new System.Drawing.Point(0, 252);
             this.pnldashboard.Name = "pnldashboard";
-            this.pnldashboard.Size = new System.Drawing.Size(1067, 438);
+            this.pnldashboard.Size = new System.Drawing.Size(1172, 394);
             this.pnldashboard.TabIndex = 5;
             // 
             // charthacimgrafik
@@ -335,14 +324,13 @@
             this.charthacimgrafik.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
             this.charthacimgrafik.Legends.Add(legend1);
-            this.charthacimgrafik.Location = new System.Drawing.Point(0, 205);
-            this.charthacimgrafik.Margin = new System.Windows.Forms.Padding(4);
+            this.charthacimgrafik.Location = new System.Drawing.Point(0, 167);
             this.charthacimgrafik.Name = "charthacimgrafik";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.charthacimgrafik.Series.Add(series1);
-            this.charthacimgrafik.Size = new System.Drawing.Size(1067, 233);
+            this.charthacimgrafik.Size = new System.Drawing.Size(1172, 227);
             this.charthacimgrafik.TabIndex = 2;
             this.charthacimgrafik.Text = "chart1";
             // 
@@ -354,13 +342,12 @@
             this.tblistatistik.Controls.Add(this.grpozetbilgi, 0, 0);
             this.tblistatistik.Controls.Add(this.grpzirveler, 1, 0);
             this.tblistatistik.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tblistatistik.Location = new System.Drawing.Point(0, 20);
-            this.tblistatistik.Margin = new System.Windows.Forms.Padding(4);
+            this.tblistatistik.Location = new System.Drawing.Point(0, 17);
             this.tblistatistik.Name = "tblistatistik";
             this.tblistatistik.RowCount = 1;
             this.tblistatistik.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblistatistik.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblistatistik.Size = new System.Drawing.Size(1067, 185);
+            this.tblistatistik.Size = new System.Drawing.Size(1172, 150);
             this.tblistatistik.TabIndex = 1;
             // 
             // grpozetbilgi
@@ -369,11 +356,9 @@
             this.grpozetbilgi.Controls.Add(this.lbltislem);
             this.grpozetbilgi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpozetbilgi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpozetbilgi.Location = new System.Drawing.Point(4, 4);
-            this.grpozetbilgi.Margin = new System.Windows.Forms.Padding(4);
+            this.grpozetbilgi.Location = new System.Drawing.Point(3, 3);
             this.grpozetbilgi.Name = "grpozetbilgi";
-            this.grpozetbilgi.Padding = new System.Windows.Forms.Padding(4);
-            this.grpozetbilgi.Size = new System.Drawing.Size(525, 177);
+            this.grpozetbilgi.Size = new System.Drawing.Size(580, 144);
             this.grpozetbilgi.TabIndex = 0;
             this.grpozetbilgi.TabStop = false;
             this.grpozetbilgi.Text = "Özet Bilgiler";
@@ -381,20 +366,18 @@
             // lblthacim
             // 
             this.lblthacim.AutoSize = true;
-            this.lblthacim.Location = new System.Drawing.Point(31, 101);
-            this.lblthacim.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblthacim.Location = new System.Drawing.Point(23, 82);
             this.lblthacim.Name = "lblthacim";
-            this.lblthacim.Size = new System.Drawing.Size(142, 20);
+            this.lblthacim.Size = new System.Drawing.Size(120, 17);
             this.lblthacim.TabIndex = 1;
             this.lblthacim.Text = "Toplam Hacim :";
             // 
             // lbltislem
             // 
             this.lbltislem.AutoSize = true;
-            this.lbltislem.Location = new System.Drawing.Point(27, 43);
-            this.lbltislem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltislem.Location = new System.Drawing.Point(20, 35);
             this.lbltislem.Name = "lbltislem";
-            this.lbltislem.Size = new System.Drawing.Size(133, 20);
+            this.lbltislem.Size = new System.Drawing.Size(113, 17);
             this.lbltislem.TabIndex = 0;
             this.lbltislem.Text = "Toplam İşlem :";
             // 
@@ -404,11 +387,9 @@
             this.grpzirveler.Controls.Add(this.lblsikurun);
             this.grpzirveler.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpzirveler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpzirveler.Location = new System.Drawing.Point(537, 4);
-            this.grpzirveler.Margin = new System.Windows.Forms.Padding(4);
+            this.grpzirveler.Location = new System.Drawing.Point(589, 3);
             this.grpzirveler.Name = "grpzirveler";
-            this.grpzirveler.Padding = new System.Windows.Forms.Padding(4);
-            this.grpzirveler.Size = new System.Drawing.Size(526, 177);
+            this.grpzirveler.Size = new System.Drawing.Size(580, 144);
             this.grpzirveler.TabIndex = 1;
             this.grpzirveler.TabStop = false;
             this.grpzirveler.Text = "Zirveler";
@@ -416,20 +397,18 @@
             // lblsikciftlik
             // 
             this.lblsikciftlik.AutoSize = true;
-            this.lblsikciftlik.Location = new System.Drawing.Point(25, 101);
-            this.lblsikciftlik.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblsikciftlik.Location = new System.Drawing.Point(19, 82);
             this.lblsikciftlik.Name = "lblsikciftlik";
-            this.lblsikciftlik.Size = new System.Drawing.Size(209, 20);
+            this.lblsikciftlik.Size = new System.Drawing.Size(175, 17);
             this.lblsikciftlik.TabIndex = 1;
             this.lblsikciftlik.Text = "En Sık Çalışılan Çiftlik :";
             // 
             // lblsikurun
             // 
             this.lblsikurun.AutoSize = true;
-            this.lblsikurun.Location = new System.Drawing.Point(21, 43);
-            this.lblsikurun.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblsikurun.Location = new System.Drawing.Point(16, 35);
             this.lblsikurun.Name = "lblsikurun";
-            this.lblsikurun.Size = new System.Drawing.Size(185, 20);
+            this.lblsikurun.Size = new System.Drawing.Size(159, 17);
             this.lblsikurun.TabIndex = 0;
             this.lblsikurun.Text = "En Çok Alınan Ürün :";
             // 
@@ -439,24 +418,25 @@
             this.lblistatistik.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblistatistik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblistatistik.Location = new System.Drawing.Point(0, 0);
-            this.lblistatistik.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblistatistik.Name = "lblistatistik";
-            this.lblistatistik.Size = new System.Drawing.Size(252, 20);
+            this.lblistatistik.Size = new System.Drawing.Size(214, 17);
             this.lblistatistik.TabIndex = 0;
             this.lblistatistik.Text = "Basit Raporlama ve İstatistik";
             // 
             // FirmaDetay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 746);
+            this.ClientSize = new System.Drawing.Size(1172, 646);
+            this.ControlBox = false;
             this.Controls.Add(this.pnldashboard);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblgecmisbaslik);
             this.Controls.Add(this.pnlustbilgi);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FirmaDetay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FirmaDetay";
             this.Load += new System.EventHandler(this.FirmaDetay_Load);
             this.menuStrip1.ResumeLayout(false);

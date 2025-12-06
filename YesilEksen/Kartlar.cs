@@ -12,10 +12,14 @@ namespace YesilEksen
 {
     public partial class Kartlar : UserControl
     {
+        // Detay butonuna tıklandığında tetiklenecek event
+        public event EventHandler DetayClick;
+
         public Kartlar()
         {
             InitializeComponent();
         }
+
         // Dışarıdan Başlığı (Firma ve Çiftlik) Adını ayarlamak için
         public string Baslik
         {
@@ -52,20 +56,33 @@ namespace YesilEksen
                 lbldurum.Text = "Durumu: " + value;
                 if (value == "Onaylandı")
                 {
-                    lbldurum.BackColor = Color.Green; // Onaylıysa Yeşil
+                    lbldurum.BackColor = Color.Green;
+                    lbldurum.ForeColor = Color.White;
+                }
+                else if (value == "Reddedildi")
+                {
+                    lbldurum.BackColor = Color.Red;
+                    lbldurum.ForeColor = Color.White;
                 }
                 else
                 {
-                    lbldurum.BackColor = Color.Red; // Onaylı değilse Kırmızı
+                    lbldurum.BackColor = Color.Orange;
+                    lbldurum.ForeColor = Color.Black;
                 }
             }
         }
 
+        // Detay butonunu gizlemek/göstermek için
+        public bool DetayButonuGoster
+        {
+            get { return btndetay.Visible; }
+            set { btndetay.Visible = value; }
+        }
+
         private void btndetay_Click(object sender, EventArgs e)
         {
-            Ciftlikler ciftlikler = new Ciftlikler();
-            ciftlikler.Show();
-            this.Hide();
+            // Event'i tetikle - dışarıdan dinlenecek
+            DetayClick?.Invoke(this, EventArgs.Empty);
         }
     }
 }

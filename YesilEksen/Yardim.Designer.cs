@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Yardim));
             this.button1 = new System.Windows.Forms.Button();
             this.pnlicerik = new System.Windows.Forms.Panel();
-            this.lbl_yardim = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.lbl_yardim = new System.Windows.Forms.Label();
             this.pnlicerik.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,18 +60,6 @@
             this.pnlicerik.Size = new System.Drawing.Size(800, 370);
             this.pnlicerik.TabIndex = 1;
             // 
-            // lbl_yardim
-            // 
-            this.lbl_yardim.AutoSize = true;
-            this.lbl_yardim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_yardim.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_yardim.Location = new System.Drawing.Point(329, 9);
-            this.lbl_yardim.Name = "lbl_yardim";
-            this.lbl_yardim.Size = new System.Drawing.Size(135, 17);
-            this.lbl_yardim.TabIndex = 0;
-            this.lbl_yardim.Text = "Kullanım Kılavuzu";
-            this.lbl_yardim.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -84,15 +72,31 @@
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
+            // lbl_yardim
+            // 
+            this.lbl_yardim.AutoSize = true;
+            this.lbl_yardim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_yardim.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_yardim.Location = new System.Drawing.Point(329, 9);
+            this.lbl_yardim.Name = "lbl_yardim";
+            this.lbl_yardim.Size = new System.Drawing.Size(135, 17);
+            this.lbl_yardim.TabIndex = 0;
+            this.lbl_yardim.Text = "Kullanım Kılavuzu";
+            this.lbl_yardim.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Yardim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.pnlicerik);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Yardim";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yardim";
+            this.Load += new System.EventHandler(this.Yardim_Load);
             this.pnlicerik.ResumeLayout(false);
             this.pnlicerik.PerformLayout();
             this.ResumeLayout(false);

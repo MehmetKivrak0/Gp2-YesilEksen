@@ -39,39 +39,43 @@
             // 
             // lblbaslik
             // 
-            this.lblbaslik.AutoSize = true;
+            this.lblbaslik.AutoSize = false;
             this.lblbaslik.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbaslik.Location = new System.Drawing.Point(11, 72);
+            this.lblbaslik.Location = new System.Drawing.Point(4, 72);
             this.lblbaslik.Name = "lblbaslik";
-            this.lblbaslik.Size = new System.Drawing.Size(45, 13);
+            this.lblbaslik.Size = new System.Drawing.Size(190, 30);
             this.lblbaslik.TabIndex = 1;
             this.lblbaslik.Text = "Firma :";
+            this.lblbaslik.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             // 
             // lblsektor
             // 
-            this.lblsektor.AutoSize = true;
+            this.lblsektor.AutoSize = false;
             this.lblsektor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsektor.Location = new System.Drawing.Point(4, 104);
             this.lblsektor.Name = "lblsektor";
-            this.lblsektor.Size = new System.Drawing.Size(52, 13);
+            this.lblsektor.Size = new System.Drawing.Size(190, 30);
             this.lblsektor.TabIndex = 2;
             this.lblsektor.Text = "Sektör :";
+            this.lblsektor.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             // 
             // lblsehir
             // 
-            this.lblsehir.AutoSize = true;
+            this.lblsehir.AutoSize = false;
             this.lblsehir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsehir.Location = new System.Drawing.Point(12, 137);
+            this.lblsehir.Location = new System.Drawing.Point(4, 137);
             this.lblsehir.Name = "lblsehir";
-            this.lblsehir.Size = new System.Drawing.Size(44, 13);
+            this.lblsehir.Size = new System.Drawing.Size(190, 40);
             this.lblsehir.TabIndex = 3;
             this.lblsehir.Text = "Şehir :";
+            this.lblsehir.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblsehir.AutoEllipsis = false;
             // 
             // lbldurum
             // 
             this.lbldurum.AutoSize = true;
             this.lbldurum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldurum.Location = new System.Drawing.Point(25, 180);
+            this.lbldurum.Location = new System.Drawing.Point(25, 185);
             this.lbldurum.Name = "lbldurum";
             this.lbldurum.Size = new System.Drawing.Size(58, 13);
             this.lbldurum.TabIndex = 4;
@@ -110,7 +114,7 @@
             this.Controls.Add(this.lblbaslik);
             this.Controls.Add(this.piclogo);
             this.Name = "Kartlar";
-            this.Size = new System.Drawing.Size(198, 248);
+            this.Size = new System.Drawing.Size(198, 260);
             ((System.ComponentModel.ISupportInitialize)(this.piclogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
