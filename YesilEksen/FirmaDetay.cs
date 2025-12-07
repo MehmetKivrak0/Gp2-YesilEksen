@@ -4,6 +4,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using QRCoder;
 
 namespace YesilEksen
 {
@@ -34,6 +35,7 @@ namespace YesilEksen
                     LoadFirmaDetay();
                     LoadSatinAlmaGecmisi();
                     LoadIstatistikler();
+                    LoadQRCode();
                 }
 
                 // Grafiği yükle
@@ -290,6 +292,76 @@ namespace YesilEksen
             Firmalar firmalar = new Firmalar();
             firmalar.Show();
             this.Close();
+        }
+
+        /// <summary>
+        /// Firma için QR kod oluşturur ve PictureBox'a yükler
+        /// QR kod okutulduğunda firma bilgileri görünecek
+        /// </summary>
+        private void LoadQRCode()
+        {
+            try
+            {
+                if (FirmaID <= 0)
+                    return;
+
+                // Firma bilgilerini veritabanından çek
+                string query = @"
+                    SELECT 
+                        f.Unvan, f.VergiNo, f.Adres,
+                        s.SektorAdi, sh.SehirAdi, d.DurumAdi
+                    FROM Tbl_Firmalar f
+                    LEFT JOIN Tbl_Sektorler s ON f.SektorID = s.SektorID
+                    LEFT JOIN Tbl_Sehirler sh ON f.SehirID = sh.SehirID
+                    LEFT JOIN Tbl_OnayDurumlari d ON f.DurumID = d.DurumID
+                    WHERE f.FirmaID = @firmaID";
+
+                DataTable dt = DatabaseHelper.ExecuteQuery(query, 
+                    new SQLiteParameter("@firmaID", FirmaID));
+
+                if (dt.Rows.Count == 0)
+                    return;
+
+                DataRow row = dt.Rows[0];
+                string unvan = row["Unvan"]?.ToString() ?? "Bilinmiyor";
+                string vergiNo = row["VergiNo"]?.ToString() ?? "";
+                string adres = row["Adres"]?.ToString() ?? "";
+                string sektor = row["SektorAdi"]?.ToString() ?? "";
+                string sehir = row["SehirAdi"]?.ToString() ?? "";
+                string durum = row["DurumAdi"]?.ToString() ?? "";
+
+                // QR kod içeriği - Okunabilir format
+                string qrContent = $"=== FIRMA BİLGİLERİ ===\n\n" +
+                    $"Firma Adı: {unvan}\n" +
+                    $"Vergi No: {vergiNo}\n" +
+                    $"Sektör: {sektor}\n" +
+                    $"Şehir: {sehir}\n" +
+                    $"Adres: {adres}\n" +
+                    $"Durum: {durum}\n" +
+                    $"\nFirma ID: {FirmaID}\n" +
+                    $"\nYeşil Eksen - Sürdürülebilir Tarım Platformu";
+
+                // QR kod oluştur
+                using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
+                {
+                    QRCodeData qrData = qrGenerator.CreateQrCode(qrContent, QRCodeGenerator.ECCLevel.Q);
+                    using (QRCode qrCode = new QRCode(qrData))
+                    {
+                        // PictureBox boyutuna göre QR kod oluştur
+                        int qrSize = Math.Min(picqr.Width, picqr.Height);
+                        if (qrSize < 100) qrSize = 200; // Minimum boyut
+                        
+                        Bitmap qrBitmap = qrCode.GetGraphic(20, Color.Black, Color.White, true);
+                        picqr.Image = qrBitmap;
+                        picqr.SizeMode = PictureBoxSizeMode.Zoom;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"QR kod oluşturulurken hata: {ex.Message}", 
+                    "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnYardim_Click(object sender, EventArgs e)

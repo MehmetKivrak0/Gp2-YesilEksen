@@ -4,6 +4,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using QRCoder;
 
 namespace YesilEksen
 {
@@ -34,6 +35,7 @@ namespace YesilEksen
                     LoadCiftlikDetay();
                     LoadUrunListesi();
                     LoadIstatistikler();
+                    LoadQRCode();
                 }
 
                 // Grafiği yükle
@@ -285,6 +287,83 @@ namespace YesilEksen
             Ciftlikler ciftlikler = new Ciftlikler();
             ciftlikler.Show();
             this.Close();
+        }
+
+        /// <summary>
+        /// Çiftlik için QR kod oluşturur ve PictureBox'a yükler
+        /// QR kod okutulduğunda çiftlik bilgileri görünecek
+        /// </summary>
+        private void LoadQRCode()
+        {
+            try
+            {
+                if (CiftlikID <= 0)
+                    return;
+
+                // Çiftlik bilgilerini veritabanından çek
+                string query = @"
+                    SELECT 
+                        c.Unvan, c.VergiNo, c.Adres,
+                        s.SektorAdi, sh.SehirAdi, d.DurumAdi
+                    FROM Tbl_Ciftlikler c
+                    LEFT JOIN Tbl_Sektorler s ON c.SektorID = s.SektorID
+                    LEFT JOIN Tbl_Sehirler sh ON c.SehirID = sh.SehirID
+                    LEFT JOIN Tbl_OnayDurumlari d ON c.DurumID = d.DurumID
+                    WHERE c.CiftlikID = @ciftlikID";
+
+                DataTable dt = DatabaseHelper.ExecuteQuery(query, 
+                    new SQLiteParameter("@ciftlikID", CiftlikID));
+
+                if (dt.Rows.Count == 0)
+                    return;
+
+                DataRow row = dt.Rows[0];
+                string unvan = row["Unvan"]?.ToString() ?? "Bilinmiyor";
+                string vergiNo = row["VergiNo"]?.ToString() ?? "";
+                string adres = row["Adres"]?.ToString() ?? "";
+                string sektor = row["SektorAdi"]?.ToString() ?? "";
+                string sehir = row["SehirAdi"]?.ToString() ?? "";
+                string durum = row["DurumAdi"]?.ToString() ?? "";
+
+                // Toplam üretim miktarını hesapla
+                object hacimResult = DatabaseHelper.ExecuteScalar(
+                    "SELECT COALESCE(SUM(MiktarTon), 0) FROM Tbl_CiftlikUrunleri WHERE CiftlikID = @ciftlikID",
+                    new SQLiteParameter("@ciftlikID", CiftlikID));
+                double toplamHacim = hacimResult != null ? Convert.ToDouble(hacimResult) : 0;
+
+                // QR kod içeriği - Okunabilir format
+                string qrContent = $"=== ÇİFTLİK BİLGİLERİ ===\n\n" +
+                    $"Çiftlik Adı: {unvan}\n" +
+                    $"Vergi No: {vergiNo}\n" +
+                    $"Sektör: {sektor}\n" +
+                    $"Şehir: {sehir}\n" +
+                    $"Adres: {adres}\n" +
+                    $"Durum: {durum}\n" +
+                    $"Toplam Üretim: {toplamHacim:N2} Ton\n" +
+                    $"\nÇiftlik ID: {CiftlikID}\n" +
+                    $"\nYeşil Eksen - Sürdürülebilir Tarım Platformu";
+
+                // QR kod oluştur
+                using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
+                {
+                    QRCodeData qrData = qrGenerator.CreateQrCode(qrContent, QRCodeGenerator.ECCLevel.Q);
+                    using (QRCode qrCode = new QRCode(qrData))
+                    {
+                        // PictureBox boyutuna göre QR kod oluştur
+                        int qrSize = Math.Min(picqr.Width, picqr.Height);
+                        if (qrSize < 100) qrSize = 200; // Minimum boyut
+                        
+                        Bitmap qrBitmap = qrCode.GetGraphic(20, Color.Black, Color.White, true);
+                        picqr.Image = qrBitmap;
+                        picqr.SizeMode = PictureBoxSizeMode.Zoom;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"QR kod oluşturulurken hata: {ex.Message}", 
+                    "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnYardim_Click(object sender, EventArgs e)

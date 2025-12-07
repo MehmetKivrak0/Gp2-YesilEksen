@@ -46,3 +46,5 @@ C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\bin\Debug\System.Memor
 C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\bin\Debug\QRCoder.dll
+C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\bin\Debug\QRCoder.xml

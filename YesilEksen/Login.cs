@@ -77,16 +77,46 @@ namespace YesilEksen
                 string kullaniciAdi = textBox2.Text.Trim();
                 string parola = textBox1.Text.Trim();
 
+                // Admin kullanıcılarının var olduğundan emin ol (giriş öncesi kontrol)
+                DatabaseHelper.ResetAdminUsers();
+
+                // Kısa bir bekleme (connection'ların kapanması için)
+                System.Threading.Thread.Sleep(100);
+
                 // Veritabanından kullanıcı kontrolü
+                // Önce kullanıcıyı bul, sonra rol adını al
                 string query = @"
-                    SELECT k.KullaniciID, k.KullaniciAdi, k.RolID, r.RolAdi, k.IlgiliID, k.DurumID
+                    SELECT k.KullaniciID, k.KullaniciAdi, k.RolID, 
+                           COALESCE(r.RolAdi, 'Bilinmeyen') as RolAdi, 
+                           k.IlgiliID, k.DurumID, k.SifreHash
                     FROM Tbl_Kullanicilar k
-                    INNER JOIN Tbl_Roller r ON k.RolID = r.RolID
+                    LEFT JOIN Tbl_Roller r ON k.RolID = r.RolID
                     WHERE k.KullaniciAdi = @kullaniciAdi AND k.SifreHash = @parola";
 
                 DataTable dt = DatabaseHelper.ExecuteQuery(query,
                     new SQLiteParameter("@kullaniciAdi", kullaniciAdi),
                     new SQLiteParameter("@parola", parola));
+
+                // Debug: Veritabanındaki tüm admin kullanıcılarını kontrol et
+                DataTable debugDt = DatabaseHelper.ExecuteQuery(
+                    "SELECT KullaniciAdi, SifreHash, RolID, DurumID FROM Tbl_Kullanicilar WHERE RolID IN (3, 4) OR KullaniciAdi IN ('sanayi_admin', 'ziraat_admin')");
+                
+                // Roller tablosunu kontrol et
+                DataTable rollerDt = DatabaseHelper.ExecuteQuery("SELECT RolID, RolAdi FROM Tbl_Roller WHERE RolID IN (3, 4)");
+                
+                if (rollerDt.Rows.Count < 2)
+                {
+                    MessageBox.Show("Roller tablosunda admin rolleri bulunamadı! Veritabanı başlatılamadı.",
+                        "Kritik Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                
+                if (debugDt.Rows.Count == 0)
+                {
+                    MessageBox.Show("Veritabanında admin kullanıcı bulunamadı! Lütfen uygulamayı yeniden başlatın.",
+                        "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 if (dt.Rows.Count > 0)
                 {
