@@ -45,3 +45,6 @@ C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\obj\Release\YesilEksen
 C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\obj\Release\YesilEksen.csproj.Up2Date
 C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\obj\Release\YesilEksen.exe
 C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\obj\Release\YesilEksen.pdb
+C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\bin\Release\QRCoder.dll
+C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\bin\Release\QRCoder.xml
+C:\Users\kerem\Documents\GitHub\Gp2-YesilEksen\YesilEksen\obj\Release\YesilEksen.exe.config
