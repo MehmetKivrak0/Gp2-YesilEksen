@@ -7,6 +7,30 @@
       "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\sdkrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\sdkrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\sanayi\\sanayigenelrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\sanayi\\sanayigenelrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\tar\u0131m\\sdkrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\tar\u0131m\\sdkrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\tar\u0131m\\genelrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\tar\u0131m\\genelrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\sanayi\\sanayifirmaonay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\sanayi\\sanayifirmaonay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\tar\u0131m\\\u00E7iftlikonay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\tar\u0131m\\\u00E7iftlikonay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\firmadetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\firmadetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -31,24 +55,12 @@
       "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\tar\u0131m\\genelrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\tar\u0131m\\genelrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\tar\u0131m\\genelrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\tar\u0131m\\\u00E7itflik\u00FCr\u00FCnonay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\tar\u0131m\\\u00E7itflik\u00FCr\u00FCnonay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\ciftlikdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\ciftlikdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\tar\u0131m\\sdkrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\tar\u0131m\\sdkrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\sdkrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\sdkrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,20 +95,8 @@
       "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\ciftlikler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\tar\u0131m\\\u00E7iftlikonay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\tar\u0131m\\\u00E7iftlikonay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\tar\u0131m\\\u00E7\u0130ft\u00E7i-dasboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\tar\u0131m\\\u00E7\u0130ft\u00E7i-dasboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\sanayi\\sanayigenelrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\sanayi\\sanayigenelrapor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\sanayi\\sanayifirmaonay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|solutionrelative:yesileksen\\sanayi\\sanayifirmaonay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}|YesilEksen\\YesilEksen.csproj|C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\yesileksen\\sanayi\\sanayial\u0131mtalebi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -150,7 +150,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -166,75 +166,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SdkRapor.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\SdkRapor.cs",
-              "RelativeDocumentMoniker": "YesilEksen\\Tar\u0131m\\SdkRapor.cs",
-              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\SdkRapor.cs [Design]",
-              "RelativeToolTip": "YesilEksen\\Tar\u0131m\\SdkRapor.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T17:01:27.778Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "\u00C7itflik\u00DCr\u00FCnOnay.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\\u00C7itflik\u00DCr\u00FCnOnay.cs",
-              "RelativeDocumentMoniker": "YesilEksen\\Tar\u0131m\\\u00C7itflik\u00DCr\u00FCnOnay.cs",
-              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\\u00C7itflik\u00DCr\u00FCnOnay.cs [Design]",
-              "RelativeToolTip": "YesilEksen\\Tar\u0131m\\\u00C7itflik\u00DCr\u00FCnOnay.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T17:01:15.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GenelRapor.cs",
-              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\GenelRapor.cs",
-              "RelativeDocumentMoniker": "YesilEksen\\Tar\u0131m\\GenelRapor.cs",
-              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\GenelRapor.cs",
-              "RelativeToolTip": "YesilEksen\\Tar\u0131m\\GenelRapor.cs",
-              "ViewState": "AgIAAOgAAAAAAAAAAAAlwPgAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T14:23:46.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FirmaDetay.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\FirmaDetay.cs",
-              "RelativeDocumentMoniker": "YesilEksen\\FirmaDetay.cs",
-              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\FirmaDetay.cs [Design]",
-              "RelativeToolTip": "YesilEksen\\FirmaDetay.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T15:22:13.255Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CiftlikDetay.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\CiftlikDetay.cs",
-              "RelativeDocumentMoniker": "YesilEksen\\CiftlikDetay.cs",
-              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\CiftlikDetay.cs [Design]",
-              "RelativeToolTip": "YesilEksen\\CiftlikDetay.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T07:14:50.777Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "GenelRapor.cs [Design]",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\GenelRapor.cs",
               "RelativeDocumentMoniker": "YesilEksen\\Tar\u0131m\\GenelRapor.cs",
               "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\GenelRapor.cs [Design]",
               "RelativeToolTip": "YesilEksen\\Tar\u0131m\\GenelRapor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T14:23:44.054Z"
+              "WhenOpened": "2025-12-03T14:23:44.054Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Login.cs",
               "RelativeDocumentMoniker": "YesilEksen\\Login.cs",
@@ -251,14 +195,26 @@
               "RelativeDocumentMoniker": "YesilEksen\\DatabaseHelper.cs",
               "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\DatabaseHelper.cs",
               "RelativeToolTip": "YesilEksen\\DatabaseHelper.cs",
-              "ViewState": "AgIAAB0BAAAAAAAAAAAYwDEBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T14:25:14.663Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 3,
+              "Title": "SdkRapor.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\SdkRapor.cs",
+              "RelativeDocumentMoniker": "YesilEksen\\Tar\u0131m\\SdkRapor.cs",
+              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\SdkRapor.cs [Design]",
+              "RelativeToolTip": "YesilEksen\\Tar\u0131m\\SdkRapor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T17:01:27.778Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Yardim.cs [Design]",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Yardim.cs",
               "RelativeDocumentMoniker": "YesilEksen\\Yardim.cs",
@@ -269,18 +225,101 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
+              "Title": "\u00C7iftlikOnay.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\\u00C7iftlikOnay.cs",
+              "RelativeDocumentMoniker": "YesilEksen\\Tar\u0131m\\\u00C7iftlikOnay.cs",
+              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\\u00C7iftlikOnay.cs [Design]",
+              "RelativeToolTip": "YesilEksen\\Tar\u0131m\\\u00C7iftlikOnay.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T17:01:10.583Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SanayiFirmaOnay.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Sanayi\\SanayiFirmaOnay.cs",
+              "RelativeDocumentMoniker": "YesilEksen\\Sanayi\\SanayiFirmaOnay.cs",
+              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Sanayi\\SanayiFirmaOnay.cs [Design]",
+              "RelativeToolTip": "YesilEksen\\Sanayi\\SanayiFirmaOnay.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T17:00:50.497Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "SdkRapor.cs [Design]",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\SdkRapor.cs",
               "RelativeDocumentMoniker": "YesilEksen\\SdkRapor.cs",
               "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\SdkRapor.cs [Design]",
               "RelativeToolTip": "YesilEksen\\SdkRapor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T17:02:13.514Z"
+              "WhenOpened": "2025-12-05T17:02:13.514Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "SanayiGenelRapor.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Sanayi\\SanayiGenelRapor.cs",
+              "RelativeDocumentMoniker": "YesilEksen\\Sanayi\\SanayiGenelRapor.cs",
+              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Sanayi\\SanayiGenelRapor.cs [Design]",
+              "RelativeToolTip": "YesilEksen\\Sanayi\\SanayiGenelRapor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T17:00:56.733Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CiftlikDetay.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\CiftlikDetay.cs",
+              "RelativeDocumentMoniker": "YesilEksen\\CiftlikDetay.cs",
+              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\CiftlikDetay.cs [Design]",
+              "RelativeToolTip": "YesilEksen\\CiftlikDetay.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T07:14:50.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FirmaDetay.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\FirmaDetay.cs",
+              "RelativeDocumentMoniker": "YesilEksen\\FirmaDetay.cs",
+              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\FirmaDetay.cs [Design]",
+              "RelativeToolTip": "YesilEksen\\FirmaDetay.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T15:22:13.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GenelRapor.cs",
+              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\GenelRapor.cs",
+              "RelativeDocumentMoniker": "YesilEksen\\Tar\u0131m\\GenelRapor.cs",
+              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\GenelRapor.cs",
+              "RelativeToolTip": "YesilEksen\\Tar\u0131m\\GenelRapor.cs",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAlwPgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T14:23:46.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "\u00C7itflik\u00DCr\u00FCnOnay.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\\u00C7itflik\u00DCr\u00FCnOnay.cs",
+              "RelativeDocumentMoniker": "YesilEksen\\Tar\u0131m\\\u00C7itflik\u00DCr\u00FCnOnay.cs",
+              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\\u00C7itflik\u00DCr\u00FCnOnay.cs [Design]",
+              "RelativeToolTip": "YesilEksen\\Tar\u0131m\\\u00C7itflik\u00DCr\u00FCnOnay.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T17:01:15.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Program.cs",
               "RelativeDocumentMoniker": "YesilEksen\\Program.cs",
@@ -292,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "ExcelHelper.cs",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\ExcelHelper.cs",
               "RelativeDocumentMoniker": "YesilEksen\\ExcelHelper.cs",
@@ -304,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "readme.txt",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\packages\\EPPlus.8.3.1\\readme.txt",
               "RelativeDocumentMoniker": "packages\\EPPlus.8.3.1\\readme.txt",
@@ -316,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "Hakkimizda.cs [Design]",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Hakkimizda.cs",
               "RelativeDocumentMoniker": "YesilEksen\\Hakkimizda.cs",
@@ -327,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Login.Designer.cs",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Login.Designer.cs",
               "RelativeDocumentMoniker": "YesilEksen\\Login.Designer.cs",
@@ -339,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Login.cs",
               "RelativeDocumentMoniker": "YesilEksen\\Login.cs",
@@ -351,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Form1.cs",
               "RelativeDocumentMoniker": "YesilEksen\\Form1.cs",
@@ -362,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Firmalar.cs [Design]",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Firmalar.cs",
               "RelativeDocumentMoniker": "YesilEksen\\Firmalar.cs",
@@ -373,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "Ciftlikler.cs [Design]",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Ciftlikler.cs",
               "RelativeDocumentMoniker": "YesilEksen\\Ciftlikler.cs",
@@ -384,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Urunler.cs [Design]",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Urunler.cs",
               "RelativeDocumentMoniker": "YesilEksen\\Urunler.cs",
@@ -395,18 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "\u00C7iftlikOnay.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\\u00C7iftlikOnay.cs",
-              "RelativeDocumentMoniker": "YesilEksen\\Tar\u0131m\\\u00C7iftlikOnay.cs",
-              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\\u00C7iftlikOnay.cs [Design]",
-              "RelativeToolTip": "YesilEksen\\Tar\u0131m\\\u00C7iftlikOnay.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T17:01:10.583Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "\u00C7\u0130ft\u00E7i-Dasboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Tar\u0131m\\\u00C7\u0130ft\u00E7i-Dasboard.cs",
               "RelativeDocumentMoniker": "YesilEksen\\Tar\u0131m\\\u00C7\u0130ft\u00E7i-Dasboard.cs",
@@ -414,28 +442,6 @@
               "RelativeToolTip": "YesilEksen\\Tar\u0131m\\\u00C7\u0130ft\u00E7i-Dasboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-05T17:01:03.365Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "SanayiGenelRapor.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Sanayi\\SanayiGenelRapor.cs",
-              "RelativeDocumentMoniker": "YesilEksen\\Sanayi\\SanayiGenelRapor.cs",
-              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Sanayi\\SanayiGenelRapor.cs [Design]",
-              "RelativeToolTip": "YesilEksen\\Sanayi\\SanayiGenelRapor.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T17:00:56.733Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "SanayiFirmaOnay.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Sanayi\\SanayiFirmaOnay.cs",
-              "RelativeDocumentMoniker": "YesilEksen\\Sanayi\\SanayiFirmaOnay.cs",
-              "ToolTip": "C:\\Users\\kerem\\Documents\\GitHub\\Gp2-YesilEksen\\YesilEksen\\Sanayi\\SanayiFirmaOnay.cs [Design]",
-              "RelativeToolTip": "YesilEksen\\Sanayi\\SanayiFirmaOnay.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T17:00:50.497Z"
             },
             {
               "$type": "Document",
@@ -458,7 +464,8 @@
               "RelativeToolTip": "YesilEksen\\Tar\u0131m\\\u00C7iftlikOnay.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAIwCUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T14:24:04.188Z"
+              "WhenOpened": "2025-12-03T14:24:04.188Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -518,7 +525,8 @@
               "RelativeToolTip": "YesilEksen\\Sanayi\\SanayiFirmaOnay.cs",
               "ViewState": "AgIAAFoBAAAAAAAAAAAjwG4BAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T14:54:01.79Z"
+              "WhenOpened": "2025-12-03T14:54:01.79Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -566,7 +574,8 @@
               "RelativeToolTip": "YesilEksen\\Tar\u0131m\\SdkRapor.Designer.cs",
               "ViewState": "AgIAAFYAAAAAAAAAAAAowFoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T15:19:44.627Z"
+              "WhenOpened": "2025-12-03T15:19:44.627Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -20,11 +20,21 @@ namespace YesilEksen
             InitializeComponent();
         }
 
+        // Başlık etiketi (Firma Adı veya Çiftlik Adı)
+        private string baslikEtiketi = "Firma Adı: ";
+
+        // Başlık etiketini ayarlamak için
+        public string BaslikEtiketi
+        {
+            get { return baslikEtiketi; }
+            set { baslikEtiketi = value; }
+        }
+
         // Dışarıdan Başlığı (Firma ve Çiftlik) Adını ayarlamak için
         public string Baslik
         {
-            get { return lblbaslik.Text; }
-            set { lblbaslik.Text = "Firma Adı: " + value; }
+            get { return lblbaslik.Text.Replace(baslikEtiketi, ""); }
+            set { lblbaslik.Text = baslikEtiketi + value; }
         }
 
         // Sektörü ayarlamak için

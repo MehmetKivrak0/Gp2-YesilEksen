@@ -452,7 +452,7 @@
             this.txtadres.Location = new System.Drawing.Point(80, 93);
             this.txtadres.Margin = new System.Windows.Forms.Padding(2);
             this.txtadres.Name = "txtadres";
-            this.txtadres.Size = new System.Drawing.Size(116, 20);
+            this.txtadres.Size = new System.Drawing.Size(248, 20);
             this.txtadres.TabIndex = 8;
             // 
             // txtsektör
@@ -460,7 +460,7 @@
             this.txtsektör.Location = new System.Drawing.Point(80, 71);
             this.txtsektör.Margin = new System.Windows.Forms.Padding(2);
             this.txtsektör.Name = "txtsektör";
-            this.txtsektör.Size = new System.Drawing.Size(116, 20);
+            this.txtsektör.Size = new System.Drawing.Size(248, 20);
             this.txtsektör.TabIndex = 7;
             // 
             // txtvergi
@@ -468,7 +468,7 @@
             this.txtvergi.Location = new System.Drawing.Point(80, 48);
             this.txtvergi.Margin = new System.Windows.Forms.Padding(2);
             this.txtvergi.Name = "txtvergi";
-            this.txtvergi.Size = new System.Drawing.Size(116, 20);
+            this.txtvergi.Size = new System.Drawing.Size(248, 20);
             this.txtvergi.TabIndex = 6;
             // 
             // txtunvan
@@ -476,7 +476,7 @@
             this.txtunvan.Location = new System.Drawing.Point(80, 24);
             this.txtunvan.Margin = new System.Windows.Forms.Padding(2);
             this.txtunvan.Name = "txtunvan";
-            this.txtunvan.Size = new System.Drawing.Size(116, 20);
+            this.txtunvan.Size = new System.Drawing.Size(248, 20);
             this.txtunvan.TabIndex = 5;
             // 
             // label8

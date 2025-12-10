@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace YesilEksen
@@ -162,6 +165,7 @@ namespace YesilEksen
             try
             {
                 listBelge.Items.Clear();
+                listBelge.Tag = new Dictionary<string, string>(); // BelgeAdi -> DosyaYolu mapping
 
                 string query = "SELECT BelgeAdi, DosyaYolu FROM Tbl_FirmaBelgeleri WHERE FirmaID = @firmaID";
                 DataTable dt = DatabaseHelper.ExecuteQuery(query, 
@@ -169,9 +173,13 @@ namespace YesilEksen
 
                 if (dt.Rows.Count > 0)
                 {
+                    var belgeMap = (Dictionary<string, string>)listBelge.Tag;
                     foreach (DataRow row in dt.Rows)
                     {
-                        listBelge.Items.Add(row["BelgeAdi"].ToString());
+                        string belgeAdi = row["BelgeAdi"]?.ToString() ?? "";
+                        string dosyaYolu = row["DosyaYolu"]?.ToString() ?? "";
+                        listBelge.Items.Add(belgeAdi);
+                        belgeMap[belgeAdi] = dosyaYolu;
                     }
                 }
                 else
@@ -314,6 +322,7 @@ namespace YesilEksen
             txtadres.Clear();
             txtbşdetay.Clear();
             listBelge.Items.Clear();
+            listBelge.Tag = null;
             label3.Text = "[Seçili Firmanın Adı]";
         }
 
@@ -328,9 +337,48 @@ namespace YesilEksen
                     return;
                 }
 
-                MessageBox.Show($"'{listBelge.SelectedItem}' belgesi görüntüleniyor...\n" +
-                    "(Bu özellik belge yükleme sistemi kurulduğunda aktif olacaktır)", 
-                    "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string secilenBelgeAdi = listBelge.SelectedItem.ToString();
+                var belgeMap = listBelge.Tag as Dictionary<string, string>;
+
+                if (belgeMap == null || !belgeMap.ContainsKey(secilenBelgeAdi))
+                {
+                    MessageBox.Show("Belge dosya yolu bulunamadı!", 
+                        "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string dosyaYolu = belgeMap[secilenBelgeAdi];
+                
+                // Dosya yolunu tam yola çevir
+                string tamYol = dosyaYolu;
+                if (!Path.IsPathRooted(dosyaYolu))
+                {
+                    // Relative path ise, uygulama dizinine göre tam yol oluştur
+                    tamYol = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, dosyaYolu);
+                }
+
+                // Dosyanın varlığını kontrol et
+                if (!File.Exists(tamYol))
+                {
+                    MessageBox.Show($"Belge dosyası bulunamadı!\n\nDosya Yolu: {tamYol}", 
+                        "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // PDF dosyasını varsayılan programla aç
+                try
+                {
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = tamYol,
+                        UseShellExecute = true
+                    });
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Belge açılırken hata oluştu: {ex.Message}\n\nDosya Yolu: {tamYol}", 
+                        "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {

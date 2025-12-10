@@ -150,6 +150,7 @@ namespace YesilEksen
                 foreach (DataRow row in dt.Rows)
                 {
                     Kartlar yeniKart = new Kartlar();
+                    yeniKart.BaslikEtiketi = "Çiftlik Adı: "; // Çiftlikler için etiket
                     yeniKart.Baslik = row["Unvan"]?.ToString() ?? "";
                     yeniKart.Sektor = row["SektorAdi"]?.ToString() ?? "";
                     yeniKart.Sehir = row["SehirAdi"]?.ToString() ?? "";

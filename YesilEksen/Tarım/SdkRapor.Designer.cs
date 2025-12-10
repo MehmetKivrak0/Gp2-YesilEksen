@@ -283,7 +283,7 @@
             series1.Name = "Series1";
             series1.YValuesPerPoint = 2;
             this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(266, 215);
+            this.chart2.Size = new System.Drawing.Size(401, 215);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             // 
@@ -301,7 +301,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(247, 215);
+            this.chart1.Size = new System.Drawing.Size(390, 215);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -314,7 +314,7 @@
             this.panel6.Controls.Add(this.comboBox1);
             this.panel6.Controls.Add(this.button6);
             this.panel6.Controls.Add(this.textBox1);
-            this.panel6.Location = new System.Drawing.Point(2, 10);
+            this.panel6.Location = new System.Drawing.Point(68, 11);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(778, 48);
@@ -405,7 +405,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.label4);
-            this.panel7.Location = new System.Drawing.Point(360, 17);
+            this.panel7.Location = new System.Drawing.Point(619, 17);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(220, 81);
@@ -424,7 +424,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Location = new System.Drawing.Point(168, 17);
+            this.panel5.Location = new System.Drawing.Point(353, 17);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(158, 81);
@@ -445,7 +445,7 @@
             // 
             this.panel8.Controls.Add(this.label6);
             this.panel8.Controls.Add(this.label5);
-            this.panel8.Location = new System.Drawing.Point(4, 106);
+            this.panel8.Location = new System.Drawing.Point(160, 106);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(575, 89);
@@ -476,7 +476,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(4, 20);
+            this.panel3.Location = new System.Drawing.Point(90, 21);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(142, 81);

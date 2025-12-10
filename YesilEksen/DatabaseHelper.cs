@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.IO;
@@ -243,64 +244,248 @@ namespace YesilEksen
         {
             try
             {
-                // Önce tüm açık bağlantıları kapatmak için kısa bir bekleme
-                System.Threading.Thread.Sleep(100);
+                // Tüm açık bağlantıları kapat
+                SQLiteConnection.ClearAllPools();
+                
+                // Garbage collection yaparak bağlantıları serbest bırak
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                GC.Collect();
 
-                using (var conn = GetConnection())
+                // Bağlantıların kapanması için bekleme
+                System.Threading.Thread.Sleep(1000);
+
+                // Veritabanı dosyasını silmek yerine, içeriğini temizle
+                // Bu yaklaşım dosya kilitleme sorunlarını önler
+                if (File.Exists(DbPath))
                 {
-                    conn.Open();
-
-                    // Transaction başlat
-                    using (var transaction = conn.BeginTransaction())
+                    try
                     {
-                        try
+                        // Önce tüm tabloları DROP et (dosyayı silmeden)
+                        using (var conn = GetConnection())
                         {
+                            conn.Open();
+                            
                             // Tüm tabloları sil
-                            string dropTablesSQL = @"
-                                DROP TABLE IF EXISTS Tbl_SdgRaporVerisi;
-                                DROP TABLE IF EXISTS Tbl_IslemLoglari;
-                                DROP TABLE IF EXISTS Tbl_UrunBelgeleri;
-                                DROP TABLE IF EXISTS Tbl_FirmaBelgeleri;
-                                DROP TABLE IF EXISTS Tbl_CiftlikBelgeleri;
-                                DROP TABLE IF EXISTS Tbl_AlimTalepleri;
-                                DROP TABLE IF EXISTS Tbl_CiftlikUrunleri;
-                                DROP TABLE IF EXISTS Tbl_Kullanicilar;
-                                DROP TABLE IF EXISTS Tbl_Ciftlikler;
-                                DROP TABLE IF EXISTS Tbl_Firmalar;
-                                DROP TABLE IF EXISTS Tbl_Roller;
-                                DROP TABLE IF EXISTS Tbl_OnayDurumlari;
-                                DROP TABLE IF EXISTS Tbl_UrunKategorileri;
-                                DROP TABLE IF EXISTS Tbl_Sektorler;
-                                DROP TABLE IF EXISTS Tbl_Sehirler;
-                            ";
-
-                            using (var cmd = new SQLiteCommand(dropTablesSQL, conn, transaction))
+                            string[] dropTables = {
+                                "DROP TABLE IF EXISTS Tbl_IslemLoglari",
+                                "DROP TABLE IF EXISTS Tbl_SdgRaporVerisi",
+                                "DROP TABLE IF EXISTS Tbl_UrunBelgeleri",
+                                "DROP TABLE IF EXISTS Tbl_FirmaBelgeleri",
+                                "DROP TABLE IF EXISTS Tbl_CiftlikBelgeleri",
+                                "DROP TABLE IF EXISTS Tbl_AlimTalepleri",
+                                "DROP TABLE IF EXISTS Tbl_CiftlikUrunleri",
+                                "DROP TABLE IF EXISTS Tbl_Kullanicilar",
+                                "DROP TABLE IF EXISTS Tbl_Ciftlikler",
+                                "DROP TABLE IF EXISTS Tbl_Firmalar",
+                                "DROP TABLE IF EXISTS Tbl_Roller",
+                                "DROP TABLE IF EXISTS Tbl_OnayDurumlari",
+                                "DROP TABLE IF EXISTS Tbl_UrunKategorileri",
+                                "DROP TABLE IF EXISTS Tbl_Sektorler",
+                                "DROP TABLE IF EXISTS Tbl_Sehirler"
+                            };
+                            
+                            foreach (string dropSql in dropTables)
+                            {
+                                try
+                                {
+                                    using (var cmd = new SQLiteCommand(dropSql, conn))
+                                    {
+                                        cmd.ExecuteNonQuery();
+                                    }
+                                }
+                                catch { } // Tablo yoksa hata verme
+                            }
+                            
+                            // VACUUM ile veritabanını temizle
+                            using (var cmd = new SQLiteCommand("VACUUM", conn))
                             {
                                 cmd.ExecuteNonQuery();
                             }
-
-                            transaction.Commit();
+                            
+                            conn.Close();
                         }
-                        catch
+                        
+                        // Bağlantıyı kapat ve bekle
+                        SQLiteConnection.ClearAllPools();
+                        GC.Collect();
+                        System.Threading.Thread.Sleep(500);
+                        
+                        // Şimdi dosyayı silmeyi dene (artık kullanılmıyor olmalı)
+                        int retryCount = 0;
+                        int maxRetries = 5;
+                        bool deleted = false;
+                        
+                        while (retryCount < maxRetries && !deleted)
                         {
-                            transaction.Rollback();
-                            throw;
+                            try
+                            {
+                                File.SetAttributes(DbPath, FileAttributes.Normal);
+                                File.Delete(DbPath);
+                                deleted = true;
+                            }
+                            catch
+                            {
+                                retryCount++;
+                                if (retryCount < maxRetries)
+                                {
+                                    System.Threading.Thread.Sleep(200 * retryCount);
+                                    SQLiteConnection.ClearAllPools();
+                                }
+                            }
                         }
+                    }
+                    catch
+                    {
+                        // Dosya silme başarısız olsa bile devam et
+                        // Yeni dosya oluşturulurken eski dosya üzerine yazılacak
                     }
                 }
 
-                // Kısa bir bekleme
-                System.Threading.Thread.Sleep(100);
+                // WAL ve SHM dosyalarını da sil
+                string walPath = DbPath + "-wal";
+                string shmPath = DbPath + "-shm";
+                string journalPath = DbPath + "-journal";
+                
+                string[] filesToDelete = { walPath, shmPath, journalPath };
+                foreach (string filePath in filesToDelete)
+                {
+                    if (File.Exists(filePath))
+                    {
+                        try 
+                        { 
+                            File.SetAttributes(filePath, FileAttributes.Normal);
+                            File.Delete(filePath); 
+                        } 
+                        catch { }
+                    }
+                }
 
-                // Tabloları yeniden oluştur
+                // Dosya silme işlemlerinin tamamlanması için bekleme
+                System.Threading.Thread.Sleep(500);
+
+                // Dosya yoksa oluştur, varsa zaten temizlenmiş (tablolar DROP edilmiş)
+                if (!File.Exists(DbPath))
+                {
+                    SQLiteConnection.CreateFile(DbPath);
+                }
+                else
+                {
+                    // Dosya varsa ama tablolar silinmiş olabilir, tekrar kontrol et
+                    // Eğer tablolar hala varsa (silme başarısız olduysa), tekrar DROP et
+                    try
+                    {
+                        using (var conn = GetConnection())
+                        {
+                            conn.Open();
+                            
+                            // Tabloların var olup olmadığını kontrol et
+                            using (var cmd = new SQLiteCommand(
+                                "SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'Tbl_%'", conn))
+                            {
+                                using (var reader = cmd.ExecuteReader())
+                                {
+                                    if (reader.HasRows)
+                                    {
+                                        // Hala tablolar varsa, tekrar DROP et
+                                        string[] dropTables = {
+                                            "DROP TABLE IF EXISTS Tbl_IslemLoglari",
+                                            "DROP TABLE IF EXISTS Tbl_SdgRaporVerisi",
+                                            "DROP TABLE IF EXISTS Tbl_UrunBelgeleri",
+                                            "DROP TABLE IF EXISTS Tbl_FirmaBelgeleri",
+                                            "DROP TABLE IF EXISTS Tbl_CiftlikBelgeleri",
+                                            "DROP TABLE IF EXISTS Tbl_AlimTalepleri",
+                                            "DROP TABLE IF EXISTS Tbl_CiftlikUrunleri",
+                                            "DROP TABLE IF EXISTS Tbl_Kullanicilar",
+                                            "DROP TABLE IF EXISTS Tbl_Ciftlikler",
+                                            "DROP TABLE IF EXISTS Tbl_Firmalar",
+                                            "DROP TABLE IF EXISTS Tbl_Roller",
+                                            "DROP TABLE IF EXISTS Tbl_OnayDurumlari",
+                                            "DROP TABLE IF EXISTS Tbl_UrunKategorileri",
+                                            "DROP TABLE IF EXISTS Tbl_Sektorler",
+                                            "DROP TABLE IF EXISTS Tbl_Sehirler"
+                                        };
+                                        
+                                        foreach (string dropSql in dropTables)
+                                        {
+                                            try
+                                            {
+                                                using (var dropCmd = new SQLiteCommand(dropSql, conn))
+                                                {
+                                                    dropCmd.ExecuteNonQuery();
+                                                }
+                                            }
+                                            catch { }
+                                        }
+                                        
+                                        // VACUUM yap
+                                        using (var vacuumCmd = new SQLiteCommand("VACUUM", conn))
+                                        {
+                                            vacuumCmd.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            conn.Close();
+                        }
+                    }
+                    catch { } // Hata olsa bile devam et
+                }
+
+                // Tabloları oluştur
                 CreateTables();
 
-                MessageBox.Show("Veritabanı başarıyla sıfırlandı!",
+                // Temel verileri ekle (Roller, OnayDurumlari)
+                EnsureBasicData();
+
+                // Admin kullanıcılarını ekle
+                EnsureAdminUsers();
+
+                MessageBox.Show("Veritabanı tamamen sıfırlandı ve yeniden oluşturuldu!",
                     "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Veritabanı sıfırlanırken hata oluştu: {ex.Message}",
+                MessageBox.Show($"Veritabanı sıfırlanırken hata oluştu: {ex.Message}\n\nDetay: {ex.StackTrace}",
+                    "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Veritabanını tamamen yeniden oluşturur ve sentetik verileri ekler
+        /// </summary>
+        public static void RecreateDatabaseWithData()
+        {
+            try
+            {
+                var result = MessageBox.Show(
+                    "Veritabanı tamamen silinecek ve yeniden oluşturulacak. Tüm mevcut veriler kaybolacak!\n\n" +
+                    "Devam etmek istiyor musunuz?",
+                    "Uyarı",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (result != DialogResult.Yes)
+                {
+                    return;
+                }
+
+                // Veritabanını sıfırla
+                ResetDatabase();
+
+                // Kısa bir bekleme
+                System.Threading.Thread.Sleep(300);
+
+                // Sentetik verileri ekle
+                InsertSyntheticData();
+
+                MessageBox.Show("Veritabanı başarıyla yeniden oluşturuldu ve tüm veriler eklendi!",
+                    "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Veritabanı yeniden oluşturulurken hata oluştu: {ex.Message}\n\nDetay: {ex.StackTrace}",
                     "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -314,6 +499,32 @@ namespace YesilEksen
             {
                 // Önce kısa bir bekleme
                 System.Threading.Thread.Sleep(100);
+
+                // Belgeler klasöründeki dosyaları al
+                string belgelerKlasoru = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Belgeler");
+                string[] mevcutBelgeler = new string[0];
+                
+                if (Directory.Exists(belgelerKlasoru))
+                {
+                    mevcutBelgeler = Directory.GetFiles(belgelerKlasoru, "*.pdf");
+                    // Sadece dosya adlarını al (klasör yolu olmadan)
+                    for (int i = 0; i < mevcutBelgeler.Length; i++)
+                    {
+                        mevcutBelgeler[i] = Path.GetFileName(mevcutBelgeler[i]);
+                    }
+                }
+
+                // Eğer belge yoksa varsayılan belgeler kullan
+                if (mevcutBelgeler.Length == 0)
+                {
+                    mevcutBelgeler = new string[] 
+                    { 
+                        "sanayi-genel-rapor-2025-12-10.pdf",
+                        "10295103416_Ogrenci (1).pdf",
+                        "Internship2.pdf",
+                        "Faaliyet Belgesi (1).pdf"
+                    };
+                }
 
                 using (var conn = GetConnection())
                 {
@@ -495,6 +706,9 @@ namespace YesilEksen
                         "Ticaret Merkezi A Blok", "Endüstri Bölgesi 5. Sokak", "Teknoloji Parkı Bina:2"
                     };
 
+                    // Firma ID'lerini saklamak için liste
+                    List<int> firmaIDListesi = new List<int>();
+
                     for (int i = 0; i < firmaUnvanlari.Length; i++)
                     {
                         int sektorID = rnd.Next(1, sektorler.Length + 1);
@@ -506,18 +720,41 @@ namespace YesilEksen
 
                         try
                         {
-                            using (var cmd = new SQLiteCommand(
-                                "INSERT OR IGNORE INTO Tbl_Firmalar (Unvan, VergiNo, SektorID, SehirID, Adres, LogoUrl, DurumID) VALUES (@unvan, @vergi, @sektor, @sehir, @adres, @logo, @durum)", conn, transaction))
+                            // Önce firmanın var olup olmadığını kontrol et
+                            using (var checkCmd = new SQLiteCommand(
+                                "SELECT FirmaID FROM Tbl_Firmalar WHERE Unvan = @unvan OR VergiNo = @vergi", conn, transaction))
                             {
-                                cmd.Parameters.AddWithValue("@unvan", firmaUnvanlari[i]);
-                                cmd.Parameters.AddWithValue("@vergi", vergiNo);
-                                cmd.Parameters.AddWithValue("@sektor", sektorID);
-                                cmd.Parameters.AddWithValue("@sehir", sehirID);
-                                cmd.Parameters.AddWithValue("@adres", adres);
-                                cmd.Parameters.AddWithValue("@logo", logoUrl);
-                                cmd.Parameters.AddWithValue("@durum", durumID);
-                                int result = cmd.ExecuteNonQuery();
-                                if (result > 0) eklenenSayisi++;
+                                checkCmd.Parameters.AddWithValue("@unvan", firmaUnvanlari[i]);
+                                checkCmd.Parameters.AddWithValue("@vergi", vergiNo);
+                                object existingID = checkCmd.ExecuteScalar();
+
+                                if (existingID != null)
+                                {
+                                    // Firma zaten varsa, mevcut ID'yi kullan
+                                    firmaIDListesi.Add(Convert.ToInt32(existingID));
+                                }
+                                else
+                                {
+                                    // Yeni firma ekle ve ID'yi al
+                                    using (var insertCmd = new SQLiteCommand(
+                                        "INSERT INTO Tbl_Firmalar (Unvan, VergiNo, SektorID, SehirID, Adres, LogoUrl, DurumID) VALUES (@unvan, @vergi, @sektor, @sehir, @adres, @logo, @durum); SELECT last_insert_rowid();", conn, transaction))
+                                    {
+                                        insertCmd.Parameters.AddWithValue("@unvan", firmaUnvanlari[i]);
+                                        insertCmd.Parameters.AddWithValue("@vergi", vergiNo);
+                                        insertCmd.Parameters.AddWithValue("@sektor", sektorID);
+                                        insertCmd.Parameters.AddWithValue("@sehir", sehirID);
+                                        insertCmd.Parameters.AddWithValue("@adres", adres);
+                                        insertCmd.Parameters.AddWithValue("@logo", logoUrl);
+                                        insertCmd.Parameters.AddWithValue("@durum", durumID);
+                                        
+                                        object newID = insertCmd.ExecuteScalar();
+                                        if (newID != null)
+                                        {
+                                            firmaIDListesi.Add(Convert.ToInt32(newID));
+                                            eklenenSayisi++;
+                                        }
+                                    }
+                                }
                             }
                         }
                         catch (Exception ex)
@@ -525,7 +762,7 @@ namespace YesilEksen
                             System.Diagnostics.Debug.WriteLine($"Firma eklenirken hata: {firmaUnvanlari[i]} - {ex.Message}");
                         }
                     }
-                    System.Diagnostics.Debug.WriteLine($"Firmalar eklendi: {eklenenSayisi}/{firmaUnvanlari.Length}");
+                    System.Diagnostics.Debug.WriteLine($"Firmalar eklendi: {eklenenSayisi}/{firmaUnvanlari.Length}, Toplam ID: {firmaIDListesi.Count}");
                     eklenenSayisi = 0;
 
                     // 7. Çiftlikler (50+ çiftlik)
@@ -550,6 +787,9 @@ namespace YesilEksen
                         "Köyü", "Mezrası", "Beldesi", "Kasabası", "Nahiyesi"
                     };
 
+                    // Çiftlik ID'lerini saklamak için liste
+                    List<int> ciftlikIDListesi = new List<int>();
+
                     for (int i = 0; i < ciftlikUnvanlari.Length; i++)
                     {
                         int sektorID = 1; // Tarım sektörü
@@ -560,20 +800,51 @@ namespace YesilEksen
                         string adres = $"{sehirAdi} {ciftlikAdresleri[rnd.Next(ciftlikAdresleri.Length)]}";
                         string logoUrl = $"ciftlikler/ciftlik_{i + 1:D3}.png";
 
-                        using (var cmd = new SQLiteCommand(
-                            "INSERT INTO Tbl_Ciftlikler (Unvan, VergiNo, SektorID, SehirID, Adres, LogoUrl, DurumID) VALUES (@unvan, @vergi, @sektor, @sehir, @adres, @logo, @durum)", conn, transaction))
+                        try
                         {
-                            cmd.Parameters.AddWithValue("@unvan", ciftlikUnvanlari[i]);
-                            cmd.Parameters.AddWithValue("@vergi", vergiNo);
-                            cmd.Parameters.AddWithValue("@sektor", sektorID);
-                            cmd.Parameters.AddWithValue("@sehir", sehirID);
-                            cmd.Parameters.AddWithValue("@adres", adres);
-                            cmd.Parameters.AddWithValue("@logo", logoUrl);
-                            cmd.Parameters.AddWithValue("@durum", durumID);
-                            cmd.ExecuteNonQuery();
+                            // Önce çiftliğin var olup olmadığını kontrol et
+                            using (var checkCmd = new SQLiteCommand(
+                                "SELECT CiftlikID FROM Tbl_Ciftlikler WHERE Unvan = @unvan OR VergiNo = @vergi", conn, transaction))
+                            {
+                                checkCmd.Parameters.AddWithValue("@unvan", ciftlikUnvanlari[i]);
+                                checkCmd.Parameters.AddWithValue("@vergi", vergiNo);
+                                object existingID = checkCmd.ExecuteScalar();
+
+                                if (existingID != null)
+                                {
+                                    // Çiftlik zaten varsa, mevcut ID'yi kullan
+                                    ciftlikIDListesi.Add(Convert.ToInt32(existingID));
+                                }
+                                else
+                                {
+                                    // Yeni çiftlik ekle ve ID'yi al
+                                    using (var insertCmd = new SQLiteCommand(
+                                        "INSERT INTO Tbl_Ciftlikler (Unvan, VergiNo, SektorID, SehirID, Adres, LogoUrl, DurumID) VALUES (@unvan, @vergi, @sektor, @sehir, @adres, @logo, @durum); SELECT last_insert_rowid();", conn, transaction))
+                                    {
+                                        insertCmd.Parameters.AddWithValue("@unvan", ciftlikUnvanlari[i]);
+                                        insertCmd.Parameters.AddWithValue("@vergi", vergiNo);
+                                        insertCmd.Parameters.AddWithValue("@sektor", sektorID);
+                                        insertCmd.Parameters.AddWithValue("@sehir", sehirID);
+                                        insertCmd.Parameters.AddWithValue("@adres", adres);
+                                        insertCmd.Parameters.AddWithValue("@logo", logoUrl);
+                                        insertCmd.Parameters.AddWithValue("@durum", durumID);
+                                        
+                                        object newID = insertCmd.ExecuteScalar();
+                                        if (newID != null)
+                                        {
+                                            ciftlikIDListesi.Add(Convert.ToInt32(newID));
+                                            eklenenSayisi++;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine($"Çiftlik eklenirken hata: {ciftlikUnvanlari[i]} - {ex.Message}");
                         }
                     }
-                    System.Diagnostics.Debug.WriteLine($"Çiftlikler eklendi: {eklenenSayisi}/{ciftlikUnvanlari.Length}");
+                    System.Diagnostics.Debug.WriteLine($"Çiftlikler eklendi: {eklenenSayisi}/{ciftlikUnvanlari.Length}, Toplam ID: {ciftlikIDListesi.Count}");
                     eklenenSayisi = 0;
 
                     // 8. Kullanıcılar (50+ kullanıcı - firmalar, çiftlikler ve adminler)
@@ -603,8 +874,9 @@ namespace YesilEksen
                         System.Diagnostics.Debug.WriteLine($"Admin kullanıcı eklenirken hata: {ex.Message}");
                     }
 
-                    // Firma kullanıcıları
-                    for (int i = 1; i <= firmaUnvanlari.Length; i++)
+                    // Firma kullanıcıları - gerçek firma ID'lerini kullan
+                    int firmaKullaniciIndex = 1;
+                    foreach (int firmaID in firmaIDListesi)
                     {
                         int durum = rnd.Next(1, 4);
                         try
@@ -612,20 +884,22 @@ namespace YesilEksen
                             using (var cmd = new SQLiteCommand(
                                 "INSERT OR IGNORE INTO Tbl_Kullanicilar (RolID, KullaniciAdi, SifreHash, IlgiliID, DurumID) VALUES (1, @kullanici, '123456', @ilgili, @durum)", conn, transaction))
                             {
-                                cmd.Parameters.AddWithValue("@kullanici", $"firma{i}");
-                                cmd.Parameters.AddWithValue("@ilgili", i);
+                                cmd.Parameters.AddWithValue("@kullanici", $"firma{firmaKullaniciIndex}");
+                                cmd.Parameters.AddWithValue("@ilgili", firmaID);
                                 cmd.Parameters.AddWithValue("@durum", durum);
                                 if (cmd.ExecuteNonQuery() > 0) eklenenSayisi++;
                             }
                         }
                         catch (Exception ex)
                         {
-                            System.Diagnostics.Debug.WriteLine($"Firma kullanıcı eklenirken hata: firma{i} - {ex.Message}");
+                            System.Diagnostics.Debug.WriteLine($"Firma kullanıcı eklenirken hata: firma{firmaKullaniciIndex} (ID: {firmaID}) - {ex.Message}");
                         }
+                        firmaKullaniciIndex++;
                     }
 
-                    // Çiftlik kullanıcıları
-                    for (int i = 1; i <= ciftlikUnvanlari.Length; i++)
+                    // Çiftlik kullanıcıları - gerçek çiftlik ID'lerini kullan
+                    int kullaniciIndex = 1;
+                    foreach (int ciftlikID in ciftlikIDListesi)
                     {
                         int durum = rnd.Next(1, 4);
                         try
@@ -633,16 +907,17 @@ namespace YesilEksen
                             using (var cmd = new SQLiteCommand(
                                 "INSERT OR IGNORE INTO Tbl_Kullanicilar (RolID, KullaniciAdi, SifreHash, IlgiliID, DurumID) VALUES (2, @kullanici, '123456', @ilgili, @durum)", conn, transaction))
                             {
-                                cmd.Parameters.AddWithValue("@kullanici", $"ciftlik{i}");
-                                cmd.Parameters.AddWithValue("@ilgili", i);
+                                cmd.Parameters.AddWithValue("@kullanici", $"ciftlik{kullaniciIndex}");
+                                cmd.Parameters.AddWithValue("@ilgili", ciftlikID);
                                 cmd.Parameters.AddWithValue("@durum", durum);
                                 if (cmd.ExecuteNonQuery() > 0) eklenenSayisi++;
                             }
                         }
                         catch (Exception ex)
                         {
-                            System.Diagnostics.Debug.WriteLine($"Çiftlik kullanıcı eklenirken hata: ciftlik{i} - {ex.Message}");
+                            System.Diagnostics.Debug.WriteLine($"Çiftlik kullanıcı eklenirken hata: ciftlik{kullaniciIndex} (ID: {ciftlikID}) - {ex.Message}");
                         }
+                        kullaniciIndex++;
                     }
 
                     // 9. Çiftlik Ürünleri (50+ ürün)
@@ -659,11 +934,15 @@ namespace YesilEksen
                         "Biyogaz Atığı", "Fermente Atık", "Organik Pelet", "Biyokütle Briket", "Organik Toz"
                     };
 
-                    int urunIDCounter = 1;
-                    for (int ciftlikID = 1; ciftlikID <= ciftlikUnvanlari.Length && urunIDCounter <= 50; ciftlikID++)
+                    // Ürün ID'lerini saklamak için liste
+                    List<int> urunIDListesi = new List<int>();
+                    
+                    foreach (int ciftlikID in ciftlikIDListesi)
                     {
+                        if (urunIDListesi.Count >= 50) break;
+                        
                         int urunSayisi = rnd.Next(1, 4); // Her çiftliğe 1-3 ürün
-                        for (int j = 0; j < urunSayisi && urunIDCounter <= 50; j++)
+                        for (int j = 0; j < urunSayisi && urunIDListesi.Count < 50; j++)
                         {
                             int kategoriID = rnd.Next(1, kategoriler.Length + 1);
                             string urunAdi = urunAdlari[rnd.Next(urunAdlari.Length)];
@@ -673,23 +952,30 @@ namespace YesilEksen
                             try
                             {
                                 using (var cmd = new SQLiteCommand(
-                                    "INSERT INTO Tbl_CiftlikUrunleri (CiftlikID, UrunKategoriID, UrunAdi, MiktarTon, DurumID) VALUES (@ciftlik, @kategori, @urun, @miktar, @durum)", conn, transaction))
+                                    "INSERT INTO Tbl_CiftlikUrunleri (CiftlikID, UrunKategoriID, UrunAdi, MiktarTon, DurumID) VALUES (@ciftlik, @kategori, @urun, @miktar, @durum); SELECT last_insert_rowid();", conn, transaction))
                                 {
                                     cmd.Parameters.AddWithValue("@ciftlik", ciftlikID);
                                     cmd.Parameters.AddWithValue("@kategori", kategoriID);
                                     cmd.Parameters.AddWithValue("@urun", urunAdi);
                                     cmd.Parameters.AddWithValue("@miktar", miktar);
                                     cmd.Parameters.AddWithValue("@durum", durum);
-                                    if (cmd.ExecuteNonQuery() > 0) eklenenSayisi++;
+                                    
+                                    object newID = cmd.ExecuteScalar();
+                                    if (newID != null)
+                                    {
+                                        urunIDListesi.Add(Convert.ToInt32(newID));
+                                        eklenenSayisi++;
+                                    }
                                 }
                             }
                             catch (Exception ex)
                             {
                                 System.Diagnostics.Debug.WriteLine($"Ürün eklenirken hata: {urunAdi} - {ex.Message}");
                             }
-                            urunIDCounter++;
                         }
                     }
+                    System.Diagnostics.Debug.WriteLine($"Ürünler eklendi: {eklenenSayisi} ürün, Toplam ID: {urunIDListesi.Count}");
+                    eklenenSayisi = 0;
 
                     // 10. Alım Talepleri (50+ talep)
                     string[] talepNotlari = {
@@ -719,9 +1005,10 @@ namespace YesilEksen
 
                     for (int i = 1; i <= 50; i++)
                     {
-                        int firmaID = rnd.Next(1, firmaUnvanlari.Length + 1);
-                        int ciftlikID = rnd.Next(1, ciftlikUnvanlari.Length + 1);
-                        int urunID = rnd.Next(1, urunIDCounter);
+                        // Gerçek ID'lerden rastgele seç
+                        int firmaID = firmaIDListesi.Count > 0 ? firmaIDListesi[rnd.Next(firmaIDListesi.Count)] : 1;
+                        int ciftlikID = ciftlikIDListesi.Count > 0 ? ciftlikIDListesi[rnd.Next(ciftlikIDListesi.Count)] : 1;
+                        int urunID = urunIDListesi.Count > 0 ? urunIDListesi[rnd.Next(urunIDListesi.Count)] : 1;
                         double miktar = Math.Round(rnd.NextDouble() * 250 + 50, 2); // 50-300 ton
                         int durum = rnd.Next(1, 4);
                         string notlar = talepNotlari[rnd.Next(talepNotlari.Length)];
@@ -758,14 +1045,17 @@ namespace YesilEksen
                         "İmza Sirküleri", "Oda Kayıt Belgesi", "ISO Sertifikası"
                     };
 
-                    int belgeSayaci = 0;
-                    for (int ciftlikID = 1; ciftlikID <= ciftlikUnvanlari.Length && belgeSayaci < 50; ciftlikID++)
+                    // Çiftlik belgeleri - gerçek çiftlik ID'lerini kullan
+                    // Her çiftliğe en az 1 belge ekle
+                    foreach (int ciftlikID in ciftlikIDListesi)
                     {
                         int belgeSayisi = rnd.Next(1, 4); // Her çiftliğe 1-3 belge
-                        for (int j = 0; j < belgeSayisi && belgeSayaci < 50; j++)
+                        for (int j = 0; j < belgeSayisi; j++)
                         {
                             string belgeAdi = ciftlikBelgeleri[rnd.Next(ciftlikBelgeleri.Length)];
-                            string dosyaYolu = $"belgeler/ciftlikler/ciftlik_{ciftlikID:D3}_{belgeAdi.Replace(" ", "_").ToLower()}.pdf";
+                            // Belgeler klasöründen rastgele bir dosya seç
+                            string rastgeleBelge = mevcutBelgeler[rnd.Next(mevcutBelgeler.Length)];
+                            string dosyaYolu = $"Belgeler/{rastgeleBelge}";
 
                             try
                             {
@@ -780,11 +1070,12 @@ namespace YesilEksen
                             }
                             catch (Exception ex)
                             {
-                                System.Diagnostics.Debug.WriteLine($"Belge eklenirken hata: {ex.Message}");
+                                System.Diagnostics.Debug.WriteLine($"Belge eklenirken hata (CiftlikID: {ciftlikID}): {ex.Message}");
                             }
-                            belgeSayaci++;
                         }
                     }
+                    System.Diagnostics.Debug.WriteLine($"Çiftlik belgeleri eklendi: {eklenenSayisi} belge, {ciftlikIDListesi.Count} çiftlik için");
+                    eklenenSayisi = 0;
 
                     // 12. Firma Belgeleri (50+ belge)
                     string[] firmaBelgeleri = {
@@ -793,14 +1084,17 @@ namespace YesilEksen
                         "Faaliyet Belgesi", "İhracat Belgesi", "Kalite Belgesi", "Güvenlik Belgesi"
                     };
 
-                    belgeSayaci = 0;
-                    for (int firmaID = 1; firmaID <= firmaUnvanlari.Length && belgeSayaci < 50; firmaID++)
+                    // Firma belgeleri - gerçek firma ID'lerini kullan
+                    // Her firmaya en az 1 belge ekle
+                    foreach (int firmaID in firmaIDListesi)
                     {
                         int belgeSayisi = rnd.Next(1, 4); // Her firmaya 1-3 belge
-                        for (int j = 0; j < belgeSayisi && belgeSayaci < 50; j++)
+                        for (int j = 0; j < belgeSayisi; j++)
                         {
                             string belgeAdi = firmaBelgeleri[rnd.Next(firmaBelgeleri.Length)];
-                            string dosyaYolu = $"belgeler/firmalar/firma_{firmaID:D3}_{belgeAdi.Replace(" ", "_").ToLower()}.pdf";
+                            // Belgeler klasöründen rastgele bir dosya seç
+                            string rastgeleBelge = mevcutBelgeler[rnd.Next(mevcutBelgeler.Length)];
+                            string dosyaYolu = $"Belgeler/{rastgeleBelge}";
 
                             try
                             {
@@ -815,11 +1109,12 @@ namespace YesilEksen
                             }
                             catch (Exception ex)
                             {
-                                System.Diagnostics.Debug.WriteLine($"Belge eklenirken hata: {ex.Message}");
+                                System.Diagnostics.Debug.WriteLine($"Belge eklenirken hata (FirmaID: {firmaID}): {ex.Message}");
                             }
-                            belgeSayaci++;
                         }
                     }
+                    System.Diagnostics.Debug.WriteLine($"Firma belgeleri eklendi: {eklenenSayisi} belge, {firmaIDListesi.Count} firma için");
+                    eklenenSayisi = 0;
 
                     // 13. Ürün Belgeleri (50+ belge)
                     string[] urunBelgeleri = {
@@ -828,14 +1123,17 @@ namespace YesilEksen
                         "Toprak Analizi", "Su Analizi", "Hav Analizi", "Mikrobiyolojik Analiz"
                     };
 
-                    belgeSayaci = 0;
-                    for (int urunID = 1; urunID < urunIDCounter && belgeSayaci < 50; urunID++)
+                    // Ürün belgeleri - gerçek ürün ID'lerini kullan
+                    // Her ürüne en az 1 belge ekle
+                    foreach (int urunID in urunIDListesi)
                     {
                         int belgeSayisi = rnd.Next(1, 3); // Her ürüne 1-2 belge
-                        for (int j = 0; j < belgeSayisi && belgeSayaci < 50; j++)
+                        for (int j = 0; j < belgeSayisi; j++)
                         {
                             string belgeAdi = urunBelgeleri[rnd.Next(urunBelgeleri.Length)];
-                            string dosyaYolu = $"belgeler/urunler/urun_{urunID:D3}_{belgeAdi.Replace(" ", "_").ToLower()}.pdf";
+                            // Belgeler klasöründen rastgele bir dosya seç
+                            string rastgeleBelge = mevcutBelgeler[rnd.Next(mevcutBelgeler.Length)];
+                            string dosyaYolu = $"Belgeler/{rastgeleBelge}";
 
                             try
                             {
@@ -850,11 +1148,12 @@ namespace YesilEksen
                             }
                             catch (Exception ex)
                             {
-                                System.Diagnostics.Debug.WriteLine($"Belge eklenirken hata: {ex.Message}");
+                                System.Diagnostics.Debug.WriteLine($"Belge eklenirken hata (UrunID: {urunID}): {ex.Message}");
                             }
-                            belgeSayaci++;
                         }
                     }
+                    System.Diagnostics.Debug.WriteLine($"Ürün belgeleri eklendi: {eklenenSayisi} belge, {urunIDListesi.Count} ürün için");
+                    eklenenSayisi = 0;
 
                     // 14. İşlem Logları (50+ log)
                     string[] logMesajlari = {

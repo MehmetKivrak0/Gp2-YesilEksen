@@ -289,18 +289,18 @@
             // 
             this.groupBox3.Controls.Add(this.btnGörüntüle);
             this.groupBox3.Controls.Add(this.listBelge);
-            this.groupBox3.Location = new System.Drawing.Point(334, 45);
+            this.groupBox3.Location = new System.Drawing.Point(495, 45);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(238, 168);
+            this.groupBox3.Size = new System.Drawing.Size(332, 168);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Yüklenen Belgeler";
             // 
             // btnGörüntüle
             // 
-            this.btnGörüntüle.Location = new System.Drawing.Point(162, 138);
+            this.btnGörüntüle.Location = new System.Drawing.Point(200, 129);
             this.btnGörüntüle.Margin = new System.Windows.Forms.Padding(2);
             this.btnGörüntüle.Name = "btnGörüntüle";
             this.btnGörüntüle.Size = new System.Drawing.Size(64, 25);
@@ -311,10 +311,10 @@
             // listBelge
             // 
             this.listBelge.FormattingEnabled = true;
-            this.listBelge.Location = new System.Drawing.Point(4, 17);
+            this.listBelge.Location = new System.Drawing.Point(23, 17);
             this.listBelge.Margin = new System.Windows.Forms.Padding(2);
             this.listBelge.Name = "listBelge";
-            this.listBelge.Size = new System.Drawing.Size(230, 108);
+            this.listBelge.Size = new System.Drawing.Size(241, 108);
             this.listBelge.TabIndex = 0;
             // 
             // groupBox2
@@ -332,7 +332,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(238, 168);
+            this.groupBox2.Size = new System.Drawing.Size(436, 168);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Firma  Bilgileri";
@@ -342,7 +342,7 @@
             this.txtadres.Location = new System.Drawing.Point(80, 93);
             this.txtadres.Margin = new System.Windows.Forms.Padding(2);
             this.txtadres.Name = "txtadres";
-            this.txtadres.Size = new System.Drawing.Size(116, 20);
+            this.txtadres.Size = new System.Drawing.Size(300, 20);
             this.txtadres.TabIndex = 8;
             // 
             // txtsektör
@@ -350,7 +350,7 @@
             this.txtsektör.Location = new System.Drawing.Point(80, 71);
             this.txtsektör.Margin = new System.Windows.Forms.Padding(2);
             this.txtsektör.Name = "txtsektör";
-            this.txtsektör.Size = new System.Drawing.Size(116, 20);
+            this.txtsektör.Size = new System.Drawing.Size(300, 20);
             this.txtsektör.TabIndex = 7;
             // 
             // txtvergi
@@ -358,7 +358,7 @@
             this.txtvergi.Location = new System.Drawing.Point(80, 48);
             this.txtvergi.Margin = new System.Windows.Forms.Padding(2);
             this.txtvergi.Name = "txtvergi";
-            this.txtvergi.Size = new System.Drawing.Size(116, 20);
+            this.txtvergi.Size = new System.Drawing.Size(300, 20);
             this.txtvergi.TabIndex = 6;
             // 
             // txtunvan
@@ -366,7 +366,7 @@
             this.txtunvan.Location = new System.Drawing.Point(80, 24);
             this.txtunvan.Margin = new System.Windows.Forms.Padding(2);
             this.txtunvan.Name = "txtunvan";
-            this.txtunvan.Size = new System.Drawing.Size(116, 20);
+            this.txtunvan.Size = new System.Drawing.Size(300, 20);
             this.txtunvan.TabIndex = 5;
             // 
             // label8

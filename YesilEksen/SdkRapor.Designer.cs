@@ -179,14 +179,14 @@
             this.panel4.Location = new System.Drawing.Point(222, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(627, 57);
+            this.panel4.Size = new System.Drawing.Size(906, 57);
             this.panel4.TabIndex = 30;
             // 
             // btnYardım
             // 
             this.btnYardım.BackColor = System.Drawing.Color.Red;
             this.btnYardım.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnYardım.Location = new System.Drawing.Point(443, 15);
+            this.btnYardım.Location = new System.Drawing.Point(697, 16);
             this.btnYardım.Margin = new System.Windows.Forms.Padding(2);
             this.btnYardım.Name = "btnYardım";
             this.btnYardım.Size = new System.Drawing.Size(60, 24);
@@ -199,7 +199,7 @@
             this.btnÇıkışYap.BackColor = System.Drawing.Color.Red;
             this.btnÇıkışYap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnÇıkışYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnÇıkışYap.Location = new System.Drawing.Point(522, 10);
+            this.btnÇıkışYap.Location = new System.Drawing.Point(776, 11);
             this.btnÇıkışYap.Margin = new System.Windows.Forms.Padding(2);
             this.btnÇıkışYap.Name = "btnÇıkışYap";
             this.btnÇıkışYap.Size = new System.Drawing.Size(104, 33);
@@ -225,7 +225,7 @@
             this.pnlfirmaonay.Location = new System.Drawing.Point(222, 62);
             this.pnlfirmaonay.Margin = new System.Windows.Forms.Padding(2);
             this.pnlfirmaonay.Name = "pnlfirmaonay";
-            this.pnlfirmaonay.Size = new System.Drawing.Size(627, 522);
+            this.pnlfirmaonay.Size = new System.Drawing.Size(906, 522);
             this.pnlfirmaonay.TabIndex = 31;
             // 
             // groupBox3
@@ -237,14 +237,14 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(591, 273);
+            this.groupBox3.Size = new System.Drawing.Size(868, 273);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Grafiksel Analiz";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(469, 244);
+            this.button2.Location = new System.Drawing.Point(742, 245);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(111, 24);
@@ -258,7 +258,7 @@
             this.chart2.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(314, 24);
+            this.chart2.Location = new System.Drawing.Point(458, 24);
             this.chart2.Margin = new System.Windows.Forms.Padding(2);
             this.chart2.Name = "chart2";
             series1.ChartArea = "ChartArea1";
@@ -267,7 +267,7 @@
             series1.Name = "Series1";
             series1.YValuesPerPoint = 2;
             this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(266, 215);
+            this.chart2.Size = new System.Drawing.Size(395, 215);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             // 
@@ -285,7 +285,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(247, 215);
+            this.chart1.Size = new System.Drawing.Size(399, 215);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -297,7 +297,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(591, 239);
+            this.groupBox1.Size = new System.Drawing.Size(868, 239);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sürdürülebilirlik Değerleri";
@@ -315,7 +315,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(582, 60);
+            this.groupBox2.Size = new System.Drawing.Size(831, 60);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Özet İstatistikler";
@@ -324,7 +324,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(385, 22);
+            this.label5.Location = new System.Drawing.Point(603, 25);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 15);
@@ -335,7 +335,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(195, 22);
+            this.label4.Location = new System.Drawing.Point(329, 26);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 15);
@@ -354,7 +354,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(480, 20);
+            this.textBox4.Location = new System.Drawing.Point(728, 21);
             this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(90, 20);
@@ -362,7 +362,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(290, 20);
+            this.textBox3.Location = new System.Drawing.Point(454, 24);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(80, 20);
@@ -370,7 +370,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 20);
+            this.textBox1.Location = new System.Drawing.Point(177, 25);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(80, 20);
@@ -380,7 +380,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(10, 22);
+            this.label2.Location = new System.Drawing.Point(87, 27);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 15);
@@ -395,7 +395,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(582, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(831, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // SdkRapor
